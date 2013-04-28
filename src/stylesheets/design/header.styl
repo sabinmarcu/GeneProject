@@ -6,8 +6,28 @@ header
 	height 45px
 	font-size 21pt
 	line-height 45px
-	background white
 	box-shadow 0 0 5px #444
-	padding-left 75px
 	z-index 9
-	color lighten(black, 50)
+	text-align center	
+	background linear-gradient(top, white 0%, white 50%, #ddd 100%)
+	nav 
+		display inline-block
+		padding 0
+		margin 0
+		li
+			list-style none
+			text-align left
+			display inline-block
+			margin 0
+			padding 0
+			float left
+			a
+				display block
+				color lighten(black, 50)
+				text-decoration none
+				padding 0 10px
+				margin 0
+				transition all 0.5s ease-in-out
+				&:hover, &:active
+					background rgba(0, 0, 0, 0.1)
+					text-shadow 0 1px 1px white

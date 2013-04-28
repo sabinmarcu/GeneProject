@@ -32,9 +32,10 @@ class DepMan extends BaseObject
 
 class DepErr extends IS.Object
 
-	@errorGroups   = [ "RequireError" ]
-	@errorGroupMap = [ 1 ]
-	@errorMessages = [ "Could not require module!" ]
+	@errors =
+		"RequireError": [
+			"Could not require module!"
+		]
 
 	@extend IS.ErrorReporter
 

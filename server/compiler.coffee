@@ -3,10 +3,11 @@ require "isf"
 stitch = require "stitchw"
 stylus = require "stylus"
 nib    = require "nib"
-base   = (require "path").resolve "@{__dirname}/../src/stylesheets"
+path   = require "path"
+base   = path.resolve "@{__dirname}/../src/stylesheets"
 pack   = stitch.createPackage
-	"dependencies": ["./node_modules/isf/lib/isf.min.js"]
-	"paths": ["./src"]
+	"dependencies": [ path.resolve "./node_modules/isf/lib/isf.min.js"]
+	"paths": [ path.resolve "./src"]
 
 
 # The Compiler Bootstrap
@@ -44,18 +45,17 @@ class Compiler
 class CompilerErrorReporter extends IS.Object
 
 	# Setting the error parameters
-	@errors: 
+	@errors = 
 		"CompilationError": [
 			"An error occured when compiling the application"
 			"The compiler failed"
 			"The styles failed"
 			"An error occured when compiling the stylesheets"
 		]
-		"WriteError" : [
+		"WriteError": [ 
 			"Couldn't write the application to the file"
 			"Couldn't write the styles to the file"
 		]
-
 
 	# Making sure it behaves properly
 	@extend IS.ErrorReporter

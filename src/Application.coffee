@@ -37,40 +37,34 @@ class Application extends BaseObject
 		# Routing Manager
 		root.LinkManager = new ( DepMan.helper "LinkManager" )
 		
+
+		_activate = (doc) -> $("article").removeClass("active"); $("article##{doc}").addClass("active")
 		# Setting up route scenarios
 		_scenarios =
-			root: => $("section").html DepMan.render "_index"; do LinkManager.linkAllAnchors
-			document: (doc) =>
-				if $("article").length is 0 then $("section").html DepMan.render "_document"
-				$("article").html DepMan.doc doc.substr 0, doc.length - 1
-				$("article").mousewheel (e, delta) ->
-					document.body.scrollLeft -= delta * 30
-					do e.preventDefault
-			gallery: => $("section").html DepMan.render "_gallery"
+			root: => _activate "home"
+			document: (doc) => 
+				doc = doc.substr 0, doc.length - 1
+				if $("article##{doc}")[0] then _activate doc
+				else _activate "404"
 
 		# Setting up routes
 		routes =
 			"/": => do _scenarios.root
 			"/index": => do _scenarios.root
 			"/pages/*": (loc) => _scenarios.document loc[0]
-			"/gallery/*": => do _scenarios.gallery
 		LinkManager.setRoutes routes
 
 		# Bootstrap it all
-		document.title = "Sabin Marcu"
-		$("body").html DepMan.render "index", title: document.title
-
-		# Generating menu
-		_menu =
-			"dashboard":
-				"_text": "Acasă"
-				"_link": "/"
-			"circle-blank":
-				"_text": "Submeniu"
-				"Istoric": "/pages/istoric"
-				"Galerie Foto": "/gallery"
-		$("aside").html DepMan.render "_menu", data: _menu
-		$("aside").find("li").hover ((e) => $("body").addClass("aside-open")) , ( (e) => $("body").removeClass("aside-open") )
+		document.title = "Castelul Peleș"
+		_menu = 
+			"home": "Acasa"
+			"istoric": "Istoric"
+			"locatie": "Locatie"
+			"personalitati": "Personalitati"
+			"imagini": "Imagini"
+			"contact": "Contact"
+		$("body").html DepMan.render "index", title: document.title, menu: _menu
+		do LinkManager.linkAllAnchors
 
 		do LinkManager.checkRoute
 
