@@ -21,6 +21,8 @@ class Application extends BaseObject
 
 		# FontAwesome
 		DepMan.stylesheet "font-awesome"
+		DepMan.stylesheet "bootstrap"
+		DepMan.stylesheet "bootstrap-responsive"
 
 		# Fonts
 		DepMan.googleFont "Satisfy", [400]
@@ -50,8 +52,7 @@ class Application extends BaseObject
 		# Setting up routes
 		routes =
 			"/": => do _scenarios.root
-			"/index": => do _scenarios.root
-			"/pages/*": (loc) => _scenarios.document loc[0]
+			"/*": (loc) => _scenarios.document loc[0]
 		LinkManager.setRoutes routes
 
 		# Bootstrap it all

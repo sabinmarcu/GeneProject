@@ -1,0 +1,8 @@
+<header><%- DepMan.render "_menu", menu: @menu %></header>
+<aside></aside>
+<section>
+	<% for section, title of @menu : %>
+		<article id="<%= section %>"><%- DepMan.doc section %></article>
+	<% end %>
+</section>
+<footer></footer>

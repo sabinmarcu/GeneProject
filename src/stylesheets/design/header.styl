@@ -4,7 +4,7 @@ header
 	left 0
 	right 0
 	height 45px
-	font-size 21pt
+	font-size 18pt
 	line-height 45px
 	box-shadow 0 0 5px #444
 	z-index 9
@@ -28,6 +28,16 @@ header
 				padding 0 10px
 				margin 0
 				transition all 0.5s ease-in-out
+				height 45px
+				line-height 45px
+				border-left solid 1px white
+				border-right solid 1px #ddd
 				&:hover, &:active
 					background rgba(0, 0, 0, 0.1)
 					text-shadow 0 1px 1px white
+					text-decoration none
+					color black
+			&:first-child a
+				border-left none
+			&:last-child a
+				border-right none

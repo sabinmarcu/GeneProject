@@ -1,0 +1,7 @@
+<nav>
+	<% for section, title of @menu :  %>
+	<li>
+		<a href="/<%= section %>"><%= title %></a>
+	</li>
+	<% end %>
+</nav>
