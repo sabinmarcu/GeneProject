@@ -1,11 +1,11 @@
 require "Object"
 class Application extends BaseObject
 
-	constructor: (message) ->
+	constructor: () ->
 
 		root = window
 		root.echo = ( require "Object" ).echo
-		document.title = "Arrow Brainstorming"
+		document.title = "GeneGenerator Project"
 
 		do ->
 			meta = document.createElement "meta"
@@ -15,27 +15,16 @@ class Application extends BaseObject
 
 		root.DepMan = new ( require "helpers/DependenciesManager" )
 
+		#jQuery
+		DepMan.lib "jquery"
+		DepMan.lib "jquery.mousewheel"
+
 		# FontAwesome
 		DepMan.stylesheet "font-awesome"
 
 		# Fonts
-		DepMan.googleFont "Electrolize", [400]
-		DepMan.googleFont "Open Sans", [400], ["latin", "latin-ext"]
-
-		document.body.innerHTML = DepMan.render "index", title:"Arrow", copyright: "&copy; Sabin Marcu 2013"
-
-		# DnD API
-		root.DnD = ( DepMan.controller "DragAndDrop" )
-		root.DnD.init()
-
-		root.isMobile = true
-		if window.orientation? or document.orientation?
-			root.isMobile = true
-			document.querySelector("html").className += " mobile "
-			document.querySelector("aside").addEventListener "click", (e) -> console.log "Aside Tagged"
-			els = document.querySelectorAll("article > *")
-			for el in els
-				el.addEventListener "click", (e) -> console.log "#{this.tagName} Tagged"
+		DepMan.googleFont "Satisfy", [400]
+		DepMan.googleFont "Open Sans", [400, 300], ["latin", "latin-ext"]
 
 		_resize = ->
 			html = document.querySelector "html"
@@ -45,15 +34,50 @@ class Application extends BaseObject
 		window.addEventListener "resize", _resize
 		do _resize
 
-		( DepMan.helper "OPMLManager" )
+		# Routing Manager
+		root.LinkManager = new ( DepMan.helper "LinkManager" )
+		
+		# Setting up route scenarios
+		_scenarios =
+			root: => $("section").html DepMan.render "_index"; do LinkManager.linkAllAnchors
+			document: (doc) =>
+				if $("article").length is 0 then $("section").html DepMan.render "_document"
+				$("article").html DepMan.doc doc.substr 0, doc.length - 1
+				$("article").mousewheel (e, delta) ->
+					document.body.scrollLeft -= delta * 30
+					do e.preventDefault
+			gallery: => $("section").html DepMan.render "_gallery"
 
-		switchMode = (mode) ->
-			html = document.querySelector("html")
-			if html.className.indexOf(mode) >= 0 then html.className = html.className.replace (new RegExp("\ ?#{mode}")), ""
-			else html.className += " #{mode}"
+		# Setting up routes
+		routes =
+			"/": => do _scenarios.root
+			"/index": => do _scenarios.root
+			"/pages/*": (loc) => _scenarios.document loc[0]
+			"/gallery/*": => do _scenarios.gallery
+		LinkManager.setRoutes routes
 
-		document.getElementById("sidebarToggle").addEventListener "click", -> switchMode "sidebaroff"
-		document.getElementById("fullScreenToggle").addEventListener "click", -> switchMode "fullscreen"
+		# Bootstrap it all
+		document.title = "Sabin Marcu"
+		$("body").html DepMan.render "index", title: document.title
+
+		# Generating menu
+		_menu =
+			"dashboard":
+				"_text": "Acasă"
+				"_link": "/"
+			"circle-blank":
+				"_text": "Submeniu"
+				"Istoric": "/pages/istoric"
+				"Galerie Foto": "/gallery"
+		$("aside").html DepMan.render "_menu", data: _menu
+		$("aside").find("li").hover ((e) => $("body").addClass("aside-open")) , ( (e) => $("body").removeClass("aside-open") )
+
+		do LinkManager.checkRoute
+
+		# Solution for Apple's iOS bullshit hover crap
+		els = document.querySelectorAll("*")
+		console.log els
+		el.addEventListener("click", (e) -> console.log "Clicked", e) for el in els
 
 
 module.exports = Application

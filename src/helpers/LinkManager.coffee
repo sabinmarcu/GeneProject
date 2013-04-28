@@ -27,10 +27,14 @@ class LinkManager extends BaseObject
 				r = do route.shift
 				l = do loc.shift
 				if r[0] is ":" then args[r.substr 1] = l
+				else if r[0] is "*"
+					args[0] = "#{l}/#{loc.join "/"}"
+					loc = ""
+					break
 				else
 					if r isnt l then res = false
 
-			if res and loc.length is 0 then document.body.setAttribute("id", _baseLoc.substr 1); return routeSet.handler args
+			if res and loc.length is 0 then document.body.setAttribute("id", _baseLoc.substr 1); return ( routeSet.handler args, after)
 			else continue
 		document.body.innerHTML = DepMan.render 404, title: "ATLAS", text: "404", reason: "This page either does not exist, or it is hidden.", message: """
 				Why would it be hidden? Well, monkeys are always rapaging through the labs, and sometimes want to play hide and seek with our pages.
@@ -40,8 +44,6 @@ class LinkManager extends BaseObject
 		do @linkAllAnchors
 		return false
 
-			
-	
 	link: (e) =>
 		el = @getParentAnchor e.srcElement
 		if @checkRoute(el.getAttribute "href") then history.pushState null, null, el.href
@@ -55,14 +57,5 @@ class LinkManager extends BaseObject
 	linkAllAnchors: =>
 		anchors = document.querySelectorAll("a")
 		anchor.addEventListener "click", @link for anchor in anchors
-
-class LinkErrorReporter extends IS.Object
-
-	@errorGroups = []
-	@errorGroupMap = []
-	@errorMessages = []
-
-	@extend IS.ErrorReporter
-
 
 module.exports = LinkManager
