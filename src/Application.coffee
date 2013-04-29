@@ -40,10 +40,13 @@ class Application extends BaseObject
 		root.LinkManager = new ( DepMan.helper "LinkManager" )
 		
 
-		_activate = (doc) -> $("article").removeClass("active"); $("article##{doc}").addClass("active")
+		_activate = (doc) -> 
+			$("body > section").addClass("active")
+			$("article").removeClass("active")
+			$("article##{doc}").addClass("active")
 		# Setting up route scenarios
 		_scenarios =
-			root: => _activate "home"
+			root: => $("article").removeClass("active")
 			document: (doc) => 
 				doc = doc.substr 0, doc.length - 1
 				if $("article##{doc}")[0] then _activate doc
@@ -56,15 +59,17 @@ class Application extends BaseObject
 		LinkManager.setRoutes routes
 
 		# Bootstrap it all
-		document.title = "Castelul Peleș"
+		document.title = "Dezastre Naturale"
 		_menu = 
-			"home": "Acasa"
-			"istoric": "Istoric"
-			"locatie": "Locatie"
-			"personalitati": "Personalitati"
-			"imagini": "Imagini"
-			"contact": "Contact"
+			"cutremure": "Cutremure"
+			"inundatii": "Inundații"
+			"vulcani": "Vulcani"
+			"tsunami": "Tsunami"
 		$("body").html DepMan.render "index", title: document.title, menu: _menu
+		$("article").click (e) -> 
+			if e.target.tagName is "ARTICLE" then $("body > section").removeClass("active")
+		
+		
 		do LinkManager.linkAllAnchors
 
 		do LinkManager.checkRoute

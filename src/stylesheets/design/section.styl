@@ -1,30 +1,25 @@
 section
 	position fixed
-	overflow hidden
-	top 45px 
+	top 0
 	bottom 0
 	right 0
 	left 0
+	z-index 0
 	article
-		position absolute
-		left 0
-		right 0
+		position fixed
 		top 0
 		bottom 0
-		overflow auto
-		z-index -1
-		transform translateY(-100%)
+		right 0
+		width 0
 		transition all 0.5s ease-in-out
-		max-width 1000px
-		padding 25px
-		margin 0 auto
-		background white
-		&#home 
-			background urL("/images/Castelul_Peles_3.jpg") no-repeat
-			background-size cover
-			width 100%
+		z-index 9
 		&.active
-			z-index 1
 			transform translateY(0)
-		& + article
-			transform translateY(100%)
+		div
+			max-width 920px
+			padding 20px
+			margin 100px auto 0
+			height 100%
+			border-top-left-radius 5px
+			border-top-right-radius 5px
+			background white

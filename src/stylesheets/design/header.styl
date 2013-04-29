@@ -1,43 +1,41 @@
 header
 	position fixed
-	top 0
 	left 0
+	top 0
+	bottom 0
 	right 0
-	height 45px
-	font-size 18pt
-	line-height 45px
-	box-shadow 0 0 5px #444
-	z-index 9
-	text-align center	
-	background linear-gradient(top, white 0%, white 50%, #ddd 100%)
-	nav 
-		display inline-block
-		padding 0
-		margin 0
+	z-index 1
+	background black
+	overflow auto
+	nav
+		box-shadow 0 0 25px #444
+		overflow hidden
 		li
-			list-style none
-			text-align left
 			display inline-block
-			margin 0
-			padding 0
 			float left
+			width 50%
+			height 250px
+			background white
+			box-shadow 0 0 250px rgba(0, 0, 0, 1) inset
+			text-align center
+			line-height 250px
+			font-size 24pt
+			transition all 0.5s ease-in-out
+			background-size cover
+			background-image url("/images/Castelul_Peles_3.jpg")
+			overflow hidden
 			a
 				display block
-				color lighten(black, 50)
-				text-decoration none
-				padding 0 10px
-				margin 0
+				width 100%
+				height 100%
 				transition all 0.5s ease-in-out
-				height 45px
-				line-height 45px
-				border-left solid 1px white
-				border-right solid 1px #ddd
-				&:hover, &:active
-					background rgba(0, 0, 0, 0.1)
-					text-shadow 0 1px 1px white
-					text-decoration none
-					color black
-			&:first-child a
-				border-left none
-			&:last-child a
-				border-right none
+				opacity 0
+				color #ccc
+			&:hover a, &:active a
+				color white
+				text-decoration none
+				text-shadow 0 1px 1px black
+				opacity 1
+			&:hover, &:active
+				box-shadow 0 0 250px rgba(0, 0, 0, 0.2) inset
+			

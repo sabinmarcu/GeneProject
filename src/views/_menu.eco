@@ -1,6 +1,6 @@
 <nav>
 	<% for section, title of @menu :  %>
-	<li>
+	<li id="<%= section %>">
 		<a href="/<%= section %>"><%= title %></a>
 	</li>
 	<% end %>

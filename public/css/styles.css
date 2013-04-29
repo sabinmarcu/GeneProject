@@ -264,6 +264,7 @@ html section article {
   max-width: 1000px;
   padding: 25px;
   margin: 0 auto;
+  background: #fff;
 }
 html section article#home {
   background: urL("/images/Castelul_Peles_3.jpg") no-repeat;

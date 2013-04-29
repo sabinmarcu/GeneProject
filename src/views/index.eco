@@ -2,7 +2,9 @@
 <aside></aside>
 <section>
 	<% for section, title of @menu : %>
-		<article id="<%= section %>"><%- DepMan.doc section %></article>
+		<article id="<%= section %>">
+			<div><%- DepMan.doc section %></div>
+		</article>
 	<% end %>
 </section>
 <footer></footer>
