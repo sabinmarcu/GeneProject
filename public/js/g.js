@@ -57,18 +57,17 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
   require("Object");
 
   Application = (function(_super) {
+
     __extends(Application, _super);
 
     function Application() {
       var el, els, root, routes, _activate, _i, _len, _menu, _resize, _scenarios,
         _this = this;
-
       root = window;
       root.echo = (require("Object")).echo;
       document.title = "GeneGenerator Project";
       (function() {
         var meta;
-
         meta = document.createElement("meta");
         meta.setAttribute("name", "viewport");
         meta.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1");
@@ -84,7 +83,6 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
       DepMan.googleFont("Open Sans", [400, 300], ["latin", "latin-ext"]);
       _resize = function() {
         var html;
-
         html = document.querySelector("html");
         if (window.innerWidth <= 1024) {
           if (html.className.indexOf("smallscreen") === -1) {
@@ -118,10 +116,7 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
         "/": function() {
           return _scenarios.root();
         },
-        "/index": function() {
-          return _scenarios.root();
-        },
-        "/pages/*": function(loc) {
+        "/*": function(loc) {
           return _scenarios.document(loc[0]);
         }
       };
@@ -159,7 +154,7 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
 
 }).call(this);
 }, "Object": function(exports, require, module) {(function() {
-  var BObject, _baseObj, _ref,
+  var BObject, _baseObj,
     __slice = [].slice,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
@@ -167,7 +162,6 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
   _baseObj = {
     echo: function() {
       var args, owner, _d;
-
       args = 1 <= arguments.length ? __slice.call(arguments, 0) : [];
       _d = new Date;
       owner = "<not supported>";
@@ -180,11 +174,11 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
   };
 
   BObject = (function(_super) {
+
     __extends(BObject, _super);
 
     function BObject() {
-      _ref = BObject.__super__.constructor.apply(this, arguments);
-      return _ref;
+      return BObject.__super__.constructor.apply(this, arguments);
     }
 
     BObject.extend(_baseObj);
@@ -199,48 +193,72 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
 
 }).call(this);
 }, "docs/contact": function(exports, require, module) {module.exports = ""}, "docs/home": function(exports, require, module) {module.exports = ""}, "docs/imagini": function(exports, require, module) {module.exports = "<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.\nStarted the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.\nStarted the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.\nStarted the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.\nStarted the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:52:19 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:52:21 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:52:59 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:53:53 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:56:51 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:57:31 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:58:29 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 05:27:09 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 05:52:36 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 05:53:00 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 05:57:12 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 07-03-2013 12:39:15 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 07-03-2013 12:39:53 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 07-03-2013 01:01:00 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 07-03-2013 01:01:13 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 10-03-2013 06:59:55 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 11-03-2013 04:37:36 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 16-03-2013 04:38:22 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>"}, "docs/istoric": function(exports, require, module) {module.exports = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas, turpis quis mollis venenatis, elit orci fermentum velit, vitae posuere ipsum mauris nec libero. Duis nunc leo, auctor vitae vestibulum dignissim, ornare et ligula. Fusce facilisis, magna ut cursus euismod, massa nisi semper libero, sed lacinia turpis leo non tellus. Vestibulum a velit neque. Ut hendrerit elementum erat non lacinia. Nam quis erat non turpis malesuada molestie. Curabitur et lectus purus.</p>\n\n<p>Integer imperdiet mi condimentum quam varius venenatis cursus nisi imperdiet. Vestibulum tempus augue a risus aliquet gravida. Nam vel velit tortor, eu pharetra lacus. Praesent risus nulla, auctor eget cursus a, lacinia in metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc tortor est, volutpat ut viverra quis, ullamcorper sed mauris. In sagittis feugiat lorem, sed pellentesque quam eleifend a. Curabitur quis libero vel leo ornare scelerisque in at nibh.</p>\n\n<p>Cras porttitor, nibh nec molestie tristique, dolor eros euismod turpis, in imperdiet tellus felis ac dolor. Cras id lacus nulla, quis feugiat est. Cras at purus massa. Fusce laoreet blandit lobortis. Donec sit amet felis ultrices quam mollis aliquet. Nulla rutrum varius purus, id tristique neque dignissim a. Pellentesque viverra bibendum neque et elementum. Nullam rhoncus libero mattis nisl pulvinar vitae lobortis ipsum tincidunt. Pellentesque feugiat pulvinar velit ac vestibulum. Nulla blandit ornare est sit amet tincidunt. Etiam mollis, felis at molestie commodo, justo leo vehicula nisl, at consectetur augue felis ac magna. Donec hendrerit tincidunt venenatis. Proin imperdiet faucibus tellus non ornare.</p>\n\n<p>Vivamus eu porta nunc. Aenean velit massa, gravida id varius ac, dapibus ac orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras sit amet sem dui. Mauris mattis aliquam odio, nec rutrum velit varius a. Donec vitae dui enim. Morbi id massa erat, quis venenatis nulla. Vivamus volutpat volutpat feugiat. Nulla facilisi. Donec vestibulum ornare risus eget consectetur. In neque nunc, tincidunt laoreet viverra non, aliquam in ligula.</p>\n\n<p>Phasellus pretium consequat dapibus. Donec rutrum ultrices diam, vitae pharetra lacus vestibulum a. In ut eros tortor, non imperdiet leo. Nullam in tellus non magna lobortis suscipit tempus ac velit. Phasellus lobortis pulvinar enim sit amet malesuada. In eu purus tortor. Nulla at lacus neque.</p>\n\n<p>Nunc vitae dui nec nunc convallis iaculis a non urna. In eu orci at nunc pretium lobortis. Nam tincidunt, mauris eget vestibulum fermentum, dui neque ultrices justo, vitae iaculis nisl nibh non tellus. Praesent eget mauris nec est posuere lobortis sit amet in massa. Vivamus ultricies diam eget orci viverra id consequat massa vulputate. Maecenas vestibulum, massa at interdum lacinia, augue diam malesuada nibh, vel ultricies diam felis eget felis. Nam vel mi quam, id pharetra sapien. In elementum diam a neque imperdiet sit amet pulvinar mi gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae odio odio, id convallis mi. Nunc nec ipsum scelerisque justo vulputate interdum. Proin ut lacus ut enim porttitor sodales. Curabitur gravida molestie velit, nec lobortis lectus ultricies et. Duis nisl dui, scelerisque vitae varius et, vestibulum at leo.</p>\n\n<p>Nullam bibendum mauris ac felis malesuada sed condimentum leo accumsan. Nullam eget est libero, sit amet varius lectus. Maecenas euismod purus id tortor fringilla venenatis. In tortor ante, dignissim ac sagittis sit amet, lacinia sit amet odio. Donec quis nulla sed mi lobortis pretium. Fusce pulvinar ipsum commodo ante feugiat sit amet tincidunt lorem feugiat. Pellentesque iaculis massa id nunc pretium placerat. Integer sed diam vel lectus rutrum laoreet at quis erat. Mauris vestibulum blandit odio, imperdiet laoreet mi placerat ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim orci, viverra at tincidunt in, condimentum a eros. Mauris adipiscing diam at massa scelerisque faucibus. Sed tortor eros, ultricies sed mattis at, mollis fermentum enim. Aenean cursus, diam quis consectetur ornare, diam libero interdum ligula, vitae facilisis ipsum risus eget arcu. Maecenas vel ipsum vel risus vulputate venenatis. Sed dictum auctor euismod.</p>\n\n<p>Nullam pellentesque ornare ligula lobortis convallis. Vestibulum blandit, dui vitae posuere tristique, diam ligula rhoncus dui, vitae pulvinar augue mi vel magna. Nunc semper adipiscing lacus a vehicula. Suspendisse at porta mi. Sed risus tellus, porttitor at feugiat ut, sollicitudin eget risus. Aliquam tincidunt condimentum massa, ut sollicitudin dui vulputate et. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>\n\n<p>Donec eu placerat lacus. Duis et semper nibh. Integer a orci sapien, eget adipiscing lacus. Mauris sollicitudin commodo sapien id volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum fermentum justo eu dapibus. Duis diam massa, blandit eget aliquam in, tempor sit amet quam. Nam molestie tortor libero, eu molestie justo. Vestibulum in odio eu dui mattis lacinia. Vivamus non lorem dolor, ac elementum nisi. Mauris enim neque, varius et adipiscing a, pharetra ut lacus. Nam tempus lectus a metus cursus ac ullamcorper metus congue. Sed vitae molestie purus. Nunc tempor sem nec ipsum tempus congue. In scelerisque viverra sapien in dapibus.</p>\n\n<p>Aenean vel tincidunt mi. Donec cursus adipiscing justo, vitae interdum augue congue et. Suspendisse sit amet quam felis. Vestibulum fermentum malesuada est, at adipiscing nunc fermentum sollicitudin. Phasellus tortor velit, fringilla faucibus semper ut, rutrum ac turpis. Suspendisse quis metus augue. Morbi ut purus velit. Sed urna sem, euismod eu posuere ac, mollis suscipit nisi. Fusce nec tortor justo. Pellentesque vitae urna eget enim dapibus fermentum eget vitae velit. Nulla facilisi. Phasellus mattis posuere iaculis. Nulla a lorem nisi.</p>\n\n<p>Nulla dapibus egestas metus, at scelerisque nulla accumsan at. Quisque neque nisl, pulvinar mollis convallis non, lacinia at nibh. Fusce congue laoreet est, eu scelerisque orci rhoncus placerat. Suspendisse volutpat massa ante, vitae egestas neque. Quisque malesuada condimentum egestas. Duis id eros felis, non scelerisque turpis. Nunc eget nisl pharetra metus tincidunt rhoncus. Morbi hendrerit dictum sapien, quis consectetur elit luctus nec.</p>\n\n<p>Nunc ultrices adipiscing consequat. Nulla nec dapibus massa. Sed hendrerit lacinia massa id commodo. Nulla volutpat viverra urna venenatis imperdiet. Nunc sollicitudin rhoncus aliquam. Quisque non risus nunc. Sed nec egestas arcu. Duis cursus feugiat odio, at elementum sem varius ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut hendrerit tempor erat, nec interdum nulla semper et.</p>\n\n<p>Integer elit metus, rutrum a aliquet ac, convallis a quam. Nullam ornare magna ut lorem aliquam commodo. Quisque dolor sem, accumsan ut mollis ac, volutpat id dolor. Integer ligula turpis, faucibus ac gravida ut, commodo eu justo. Aenean consectetur lorem sit amet sem ullamcorper vulputate. Sed in mauris eu nunc luctus interdum. Aenean sit amet est tortor, eu venenatis quam.</p>\n\n<p>Morbi elementum accumsan arcu, et pellentesque ligula laoreet blandit. Duis ligula turpis, eleifend eget suscipit quis, tincidunt ac nisl. Mauris nisi sem, placerat sit amet faucibus eu, sollicitudin quis sem. Fusce nibh massa, convallis id pharetra in, iaculis malesuada ipsum. Suspendisse velit lacus, vestibulum id tincidunt eget, tincidunt vitae ligula. Integer luctus, quam nec aliquet semper, diam orci elementum est, a imperdiet ipsum augue non lectus. Suspendisse elit neque, gravida non consectetur id, bibendum eget lorem. Pellentesque at convallis nulla. Vivamus tristique accumsan pellentesque. Donec orci leo, sodales eget iaculis eu, consectetur vel ligula. Praesent feugiat fringilla augue. Nulla elit nibh, pharetra ac scelerisque id, tempus a leo. Curabitur leo nunc, convallis ut sodales ut, dapibus eu sapien. Morbi sagittis nisl quis mauris tempor fermentum vehicula ante hendrerit.</p>\n\n<p>Maecenas scelerisque fermentum elementum. Nullam molestie mattis ultricies. Nunc imperdiet rhoncus augue, vitae commodo nibh ultrices quis. Duis vitae est quis neque placerat lacinia nec ac nisl. Fusce a elit ac mauris adipiscing adipiscing. Vivamus lobortis, odio sit amet mollis cursus, neque erat faucibus massa, sagittis scelerisque dui ante sed lorem. Mauris tincidunt commodo urna, quis volutpat ligula eleifend vel. Phasellus hendrerit pretium vehicula. Donec a arcu lorem, eget condimentum turpis. Curabitur iaculis, ipsum et condimentum gravida, libero nisi auctor magna, vitae imperdiet augue sem sit amet ipsum. Donec sollicitudin nunc quis purus egestas pellentesque.</p>\n\n<p>Duis rhoncus feugiat condimentum. Nulla nec purus dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In vitae metus turpis. Suspendisse adipiscing sollicitudin mi, eget dapibus magna semper ut. Maecenas nisl augue, mollis nec scelerisque aliquam, condimentum sed turpis. Quisque id tristique nisi. Maecenas vel dui a sem placerat facilisis feugiat nec orci. Morbi ultricies mollis hendrerit. Pellentesque convallis varius sapien sit amet eleifend.</p>\n\n<p>Praesent tincidunt, velit quis egestas pretium, diam nulla pretium massa, quis luctus mi quam vitae mauris. Ut non quam metus, ac facilisis enim. Praesent gravida volutpat posuere. Integer ultrices vulputate ipsum et auctor. Cras lacinia congue metus ac consequat. Aliquam eu augue quis ante ultrices ultrices sit amet eget ligula. Ut vitae volutpat lectus. Quisque volutpat pellentesque ligula a varius. Fusce quis orci risus. Maecenas varius, quam sed vestibulum mollis, dui mi tempus libero, ut vulputate massa lacus non metus. In nec risus sapien. Pellentesque sed suscipit eros. Sed libero ligula, posuere quis consequat eu, tempus eu odio. Cras adipiscing turpis vitae leo volutpat gravida. Praesent non ante sit amet leo rhoncus lobortis.</p>\n\n<p>Vivamus ac varius leo. Mauris porta dui et eros pulvinar posuere. Etiam leo sem, mattis nec dignissim at, elementum eu ante. Sed tellus mauris, rutrum eget euismod sed, tincidunt quis diam. Mauris luctus nibh in tellus dapibus sodales. Ut aliquam auctor diam, at mollis lectus venenatis aliquet. Ut non suscipit risus. Suspendisse euismod nunc quis lorem sagittis eget aliquam diam commodo. Vivamus pretium urna sed magna tristique dignissim. Morbi quis sem ligula. Fusce a risus quis enim cursus luctus nec non eros. Morbi ac molestie purus. Maecenas eu feugiat elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse non mauris nec leo elementum posuere. Cras enim nulla, laoreet eget accumsan sit amet, sagittis eu tortor.</p>\n\n<p>Pellentesque velit dui, vestibulum vitae sodales quis, suscipit nec est. Morbi euismod, tortor sit amet rutrum tempor, libero erat facilisis dui, ut rhoncus diam tellus quis tortor. Sed tincidunt laoreet justo, id facilisis sapien iaculis nec. Donec pharetra scelerisque risus, sit amet tincidunt diam iaculis eu. Pellentesque neque nulla, auctor et ornare pretium, pretium vitae nisi. Nunc blandit imperdiet viverra. Nulla interdum, nibh in sodales pellentesque, leo arcu tristique lacus, non venenatis purus ipsum sit amet augue. Proin neque elit, lobortis ut placerat eu, auctor mattis nunc. Fusce ut nisl lectus, sed faucibus nibh. Nullam elementum malesuada consectetur. Integer condimentum luctus libero, quis fringilla arcu lobortis quis.</p>\n\n<p>Sed dapibus ipsum id augue rhoncus non condimentum nibh cursus. Mauris blandit ornare mi, a pharetra erat interdum sit amet. Sed purus ligula, elementum et dictum facilisis, scelerisque vestibulum libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis diam id nisl porttitor vel consequat eros sagittis. Nulla rutrum molestie iaculis. Proin fringilla iaculis dictum. Suspendisse a condimentum urna. Suspendisse viverra mattis sollicitudin. Proin at turpis et libero aliquet posuere at vel lorem. In blandit hendrerit commodo. </p>"}, "docs/locatie": function(exports, require, module) {module.exports = "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed egestas, turpis quis mollis venenatis, elit orci fermentum velit, vitae posuere ipsum mauris nec libero. Duis nunc leo, auctor vitae vestibulum dignissim, ornare et ligula. Fusce facilisis, magna ut cursus euismod, massa nisi semper libero, sed lacinia turpis leo non tellus. Vestibulum a velit neque. Ut hendrerit elementum erat non lacinia. Nam quis erat non turpis malesuada molestie. Curabitur et lectus purus.</p>\n\n<p>Integer imperdiet mi condimentum quam varius venenatis cursus nisi imperdiet. Vestibulum tempus augue a risus aliquet gravida. Nam vel velit tortor, eu pharetra lacus. Praesent risus nulla, auctor eget cursus a, lacinia in metus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nunc tortor est, volutpat ut viverra quis, ullamcorper sed mauris. In sagittis feugiat lorem, sed pellentesque quam eleifend a. Curabitur quis libero vel leo ornare scelerisque in at nibh.</p>\n\n<p>Cras porttitor, nibh nec molestie tristique, dolor eros euismod turpis, in imperdiet tellus felis ac dolor. Cras id lacus nulla, quis feugiat est. Cras at purus massa. Fusce laoreet blandit lobortis. Donec sit amet felis ultrices quam mollis aliquet. Nulla rutrum varius purus, id tristique neque dignissim a. Pellentesque viverra bibendum neque et elementum. Nullam rhoncus libero mattis nisl pulvinar vitae lobortis ipsum tincidunt. Pellentesque feugiat pulvinar velit ac vestibulum. Nulla blandit ornare est sit amet tincidunt. Etiam mollis, felis at molestie commodo, justo leo vehicula nisl, at consectetur augue felis ac magna. Donec hendrerit tincidunt venenatis. Proin imperdiet faucibus tellus non ornare.</p>\n\n<p>Vivamus eu porta nunc. Aenean velit massa, gravida id varius ac, dapibus ac orci. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras sit amet sem dui. Mauris mattis aliquam odio, nec rutrum velit varius a. Donec vitae dui enim. Morbi id massa erat, quis venenatis nulla. Vivamus volutpat volutpat feugiat. Nulla facilisi. Donec vestibulum ornare risus eget consectetur. In neque nunc, tincidunt laoreet viverra non, aliquam in ligula.</p>\n\n<p>Phasellus pretium consequat dapibus. Donec rutrum ultrices diam, vitae pharetra lacus vestibulum a. In ut eros tortor, non imperdiet leo. Nullam in tellus non magna lobortis suscipit tempus ac velit. Phasellus lobortis pulvinar enim sit amet malesuada. In eu purus tortor. Nulla at lacus neque.</p>\n\n<p>Nunc vitae dui nec nunc convallis iaculis a non urna. In eu orci at nunc pretium lobortis. Nam tincidunt, mauris eget vestibulum fermentum, dui neque ultrices justo, vitae iaculis nisl nibh non tellus. Praesent eget mauris nec est posuere lobortis sit amet in massa. Vivamus ultricies diam eget orci viverra id consequat massa vulputate. Maecenas vestibulum, massa at interdum lacinia, augue diam malesuada nibh, vel ultricies diam felis eget felis. Nam vel mi quam, id pharetra sapien. In elementum diam a neque imperdiet sit amet pulvinar mi gravida. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae odio odio, id convallis mi. Nunc nec ipsum scelerisque justo vulputate interdum. Proin ut lacus ut enim porttitor sodales. Curabitur gravida molestie velit, nec lobortis lectus ultricies et. Duis nisl dui, scelerisque vitae varius et, vestibulum at leo.</p>\n\n<p>Nullam bibendum mauris ac felis malesuada sed condimentum leo accumsan. Nullam eget est libero, sit amet varius lectus. Maecenas euismod purus id tortor fringilla venenatis. In tortor ante, dignissim ac sagittis sit amet, lacinia sit amet odio. Donec quis nulla sed mi lobortis pretium. Fusce pulvinar ipsum commodo ante feugiat sit amet tincidunt lorem feugiat. Pellentesque iaculis massa id nunc pretium placerat. Integer sed diam vel lectus rutrum laoreet at quis erat. Mauris vestibulum blandit odio, imperdiet laoreet mi placerat ac. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In enim orci, viverra at tincidunt in, condimentum a eros. Mauris adipiscing diam at massa scelerisque faucibus. Sed tortor eros, ultricies sed mattis at, mollis fermentum enim. Aenean cursus, diam quis consectetur ornare, diam libero interdum ligula, vitae facilisis ipsum risus eget arcu. Maecenas vel ipsum vel risus vulputate venenatis. Sed dictum auctor euismod.</p>\n\n<p>Nullam pellentesque ornare ligula lobortis convallis. Vestibulum blandit, dui vitae posuere tristique, diam ligula rhoncus dui, vitae pulvinar augue mi vel magna. Nunc semper adipiscing lacus a vehicula. Suspendisse at porta mi. Sed risus tellus, porttitor at feugiat ut, sollicitudin eget risus. Aliquam tincidunt condimentum massa, ut sollicitudin dui vulputate et. Nulla facilisi. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>\n\n<p>Donec eu placerat lacus. Duis et semper nibh. Integer a orci sapien, eget adipiscing lacus. Mauris sollicitudin commodo sapien id volutpat. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vestibulum fermentum justo eu dapibus. Duis diam massa, blandit eget aliquam in, tempor sit amet quam. Nam molestie tortor libero, eu molestie justo. Vestibulum in odio eu dui mattis lacinia. Vivamus non lorem dolor, ac elementum nisi. Mauris enim neque, varius et adipiscing a, pharetra ut lacus. Nam tempus lectus a metus cursus ac ullamcorper metus congue. Sed vitae molestie purus. Nunc tempor sem nec ipsum tempus congue. In scelerisque viverra sapien in dapibus.</p>\n\n<p>Aenean vel tincidunt mi. Donec cursus adipiscing justo, vitae interdum augue congue et. Suspendisse sit amet quam felis. Vestibulum fermentum malesuada est, at adipiscing nunc fermentum sollicitudin. Phasellus tortor velit, fringilla faucibus semper ut, rutrum ac turpis. Suspendisse quis metus augue. Morbi ut purus velit. Sed urna sem, euismod eu posuere ac, mollis suscipit nisi. Fusce nec tortor justo. Pellentesque vitae urna eget enim dapibus fermentum eget vitae velit. Nulla facilisi. Phasellus mattis posuere iaculis. Nulla a lorem nisi.</p>\n\n<p>Nulla dapibus egestas metus, at scelerisque nulla accumsan at. Quisque neque nisl, pulvinar mollis convallis non, lacinia at nibh. Fusce congue laoreet est, eu scelerisque orci rhoncus placerat. Suspendisse volutpat massa ante, vitae egestas neque. Quisque malesuada condimentum egestas. Duis id eros felis, non scelerisque turpis. Nunc eget nisl pharetra metus tincidunt rhoncus. Morbi hendrerit dictum sapien, quis consectetur elit luctus nec.</p>\n\n<p>Nunc ultrices adipiscing consequat. Nulla nec dapibus massa. Sed hendrerit lacinia massa id commodo. Nulla volutpat viverra urna venenatis imperdiet. Nunc sollicitudin rhoncus aliquam. Quisque non risus nunc. Sed nec egestas arcu. Duis cursus feugiat odio, at elementum sem varius ut. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Ut hendrerit tempor erat, nec interdum nulla semper et.</p>\n\n<p>Integer elit metus, rutrum a aliquet ac, convallis a quam. Nullam ornare magna ut lorem aliquam commodo. Quisque dolor sem, accumsan ut mollis ac, volutpat id dolor. Integer ligula turpis, faucibus ac gravida ut, commodo eu justo. Aenean consectetur lorem sit amet sem ullamcorper vulputate. Sed in mauris eu nunc luctus interdum. Aenean sit amet est tortor, eu venenatis quam.</p>\n\n<p>Morbi elementum accumsan arcu, et pellentesque ligula laoreet blandit. Duis ligula turpis, eleifend eget suscipit quis, tincidunt ac nisl. Mauris nisi sem, placerat sit amet faucibus eu, sollicitudin quis sem. Fusce nibh massa, convallis id pharetra in, iaculis malesuada ipsum. Suspendisse velit lacus, vestibulum id tincidunt eget, tincidunt vitae ligula. Integer luctus, quam nec aliquet semper, diam orci elementum est, a imperdiet ipsum augue non lectus. Suspendisse elit neque, gravida non consectetur id, bibendum eget lorem. Pellentesque at convallis nulla. Vivamus tristique accumsan pellentesque. Donec orci leo, sodales eget iaculis eu, consectetur vel ligula. Praesent feugiat fringilla augue. Nulla elit nibh, pharetra ac scelerisque id, tempus a leo. Curabitur leo nunc, convallis ut sodales ut, dapibus eu sapien. Morbi sagittis nisl quis mauris tempor fermentum vehicula ante hendrerit.</p>\n\n<p>Maecenas scelerisque fermentum elementum. Nullam molestie mattis ultricies. Nunc imperdiet rhoncus augue, vitae commodo nibh ultrices quis. Duis vitae est quis neque placerat lacinia nec ac nisl. Fusce a elit ac mauris adipiscing adipiscing. Vivamus lobortis, odio sit amet mollis cursus, neque erat faucibus massa, sagittis scelerisque dui ante sed lorem. Mauris tincidunt commodo urna, quis volutpat ligula eleifend vel. Phasellus hendrerit pretium vehicula. Donec a arcu lorem, eget condimentum turpis. Curabitur iaculis, ipsum et condimentum gravida, libero nisi auctor magna, vitae imperdiet augue sem sit amet ipsum. Donec sollicitudin nunc quis purus egestas pellentesque.</p>\n\n<p>Duis rhoncus feugiat condimentum. Nulla nec purus dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In vitae metus turpis. Suspendisse adipiscing sollicitudin mi, eget dapibus magna semper ut. Maecenas nisl augue, mollis nec scelerisque aliquam, condimentum sed turpis. Quisque id tristique nisi. Maecenas vel dui a sem placerat facilisis feugiat nec orci. Morbi ultricies mollis hendrerit. Pellentesque convallis varius sapien sit amet eleifend.</p>\n\n<p>Praesent tincidunt, velit quis egestas pretium, diam nulla pretium massa, quis luctus mi quam vitae mauris. Ut non quam metus, ac facilisis enim. Praesent gravida volutpat posuere. Integer ultrices vulputate ipsum et auctor. Cras lacinia congue metus ac consequat. Aliquam eu augue quis ante ultrices ultrices sit amet eget ligula. Ut vitae volutpat lectus. Quisque volutpat pellentesque ligula a varius. Fusce quis orci risus. Maecenas varius, quam sed vestibulum mollis, dui mi tempus libero, ut vulputate massa lacus non metus. In nec risus sapien. Pellentesque sed suscipit eros. Sed libero ligula, posuere quis consequat eu, tempus eu odio. Cras adipiscing turpis vitae leo volutpat gravida. Praesent non ante sit amet leo rhoncus lobortis.</p>\n\n<p>Vivamus ac varius leo. Mauris porta dui et eros pulvinar posuere. Etiam leo sem, mattis nec dignissim at, elementum eu ante. Sed tellus mauris, rutrum eget euismod sed, tincidunt quis diam. Mauris luctus nibh in tellus dapibus sodales. Ut aliquam auctor diam, at mollis lectus venenatis aliquet. Ut non suscipit risus. Suspendisse euismod nunc quis lorem sagittis eget aliquam diam commodo. Vivamus pretium urna sed magna tristique dignissim. Morbi quis sem ligula. Fusce a risus quis enim cursus luctus nec non eros. Morbi ac molestie purus. Maecenas eu feugiat elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Suspendisse non mauris nec leo elementum posuere. Cras enim nulla, laoreet eget accumsan sit amet, sagittis eu tortor.</p>\n\n<p>Pellentesque velit dui, vestibulum vitae sodales quis, suscipit nec est. Morbi euismod, tortor sit amet rutrum tempor, libero erat facilisis dui, ut rhoncus diam tellus quis tortor. Sed tincidunt laoreet justo, id facilisis sapien iaculis nec. Donec pharetra scelerisque risus, sit amet tincidunt diam iaculis eu. Pellentesque neque nulla, auctor et ornare pretium, pretium vitae nisi. Nunc blandit imperdiet viverra. Nulla interdum, nibh in sodales pellentesque, leo arcu tristique lacus, non venenatis purus ipsum sit amet augue. Proin neque elit, lobortis ut placerat eu, auctor mattis nunc. Fusce ut nisl lectus, sed faucibus nibh. Nullam elementum malesuada consectetur. Integer condimentum luctus libero, quis fringilla arcu lobortis quis.</p>\n\n<p>Sed dapibus ipsum id augue rhoncus non condimentum nibh cursus. Mauris blandit ornare mi, a pharetra erat interdum sit amet. Sed purus ligula, elementum et dictum facilisis, scelerisque vestibulum libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis lobortis diam id nisl porttitor vel consequat eros sagittis. Nulla rutrum molestie iaculis. Proin fringilla iaculis dictum. Suspendisse a condimentum urna. Suspendisse viverra mattis sollicitudin. Proin at turpis et libero aliquet posuere at vel lorem. In blandit hendrerit commodo. </p>"}, "docs/personalitati": function(exports, require, module) {module.exports = "<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.\nStarted the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.\nStarted the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.\nStarted the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.\nStarted the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:52:19 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:52:21 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:52:59 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:53:53 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:56:51 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:57:31 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 04:58:29 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 05:27:09 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 05:52:36 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 05:53:00 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 06-03-2013 05:57:12 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 07-03-2013 12:39:15 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 07-03-2013 12:39:53 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 07-03-2013 01:01:00 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 07-03-2013 01:01:13 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 10-03-2013 06:59:55 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 11-03-2013 04:37:36 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>\n\n<h2>New Session : 16-03-2013 04:38:22 PM</h2>\n\n<p>Started the static server on address : 188.240.47.130, and port : 8081\nInstant compiling is enabled.</p>"}, "helpers/DependenciesManager": function(exports, require, module) {(function() {
-  var DepErr, DepMan, _ref,
-    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+  var DepErr, DepMan,
+    _this = this,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; },
     __slice = [].slice;
 
   DepMan = (function(_super) {
+
     __extends(DepMan, _super);
 
     function DepMan(basePrefix, deps) {
+      var _this = this;
       this.basePrefix = basePrefix != null ? basePrefix : "";
       this.deps = deps != null ? deps : [];
-      this.googleFont = __bind(this.googleFont, this);
-      this.lib = __bind(this.lib, this);
-      this.model = __bind(this.model, this);
-      this.controller = __bind(this.controller, this);
-      this.helper = __bind(this.helper, this);
-      this.stylesheet = __bind(this.stylesheet, this);
-      this.doc = __bind(this.doc, this);
-      this.render = __bind(this.render, this);
-      this._require = __bind(this._require, this);
+      this.googleFont = function(font, sizes, subsets) {
+        if (subsets == null) {
+          subsets = null;
+        }
+        return DepMan.prototype.googleFont.apply(_this, arguments);
+      };
+      this.lib = function(module) {
+        return DepMan.prototype.lib.apply(_this, arguments);
+      };
+      this.model = function(module) {
+        return DepMan.prototype.model.apply(_this, arguments);
+      };
+      this.controller = function(module) {
+        return DepMan.prototype.controller.apply(_this, arguments);
+      };
+      this.helper = function(module) {
+        return DepMan.prototype.helper.apply(_this, arguments);
+      };
+      this.stylesheet = function(module) {
+        return DepMan.prototype.stylesheet.apply(_this, arguments);
+      };
+      this.doc = function(module) {
+        return DepMan.prototype.doc.apply(_this, arguments);
+      };
+      this.render = function() {
+        var args, module;
+        module = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
+        return DepMan.prototype.render.apply(_this, arguments);
+      };
+      this._require = function(module, prefix) {
+        if (prefix == null) {
+          prefix = "";
+        }
+        return DepMan.prototype._require.apply(_this, arguments);
+      };
       this.echo("Activated DependenciesManager!");
     }
 
     DepMan.prototype._require = function(module, prefix) {
-      var e;
-
       if (prefix == null) {
         prefix = "";
       }
       try {
         this.deps["" + prefix + module] = require("" + this.basePrefix + prefix + module);
         return this.deps["" + prefix + module];
-      } catch (_error) {
-        e = _error;
+      } catch (e) {
         throw DepErr.generate(1, "[BP= " + this.basePrefix + "][P= " + prefix + "][P= " + module + "] " + (DepErr.wrapCustomError(e)));
       }
     };
 
     DepMan.prototype.render = function() {
       var args, module;
-
       module = arguments[0], args = 2 <= arguments.length ? __slice.call(arguments, 1) : [];
       return (this._require(module, "views/")).apply(this, args);
     };
@@ -271,7 +289,6 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
 
     DepMan.prototype.googleFont = function(font, sizes, subsets) {
       var names, string, _s;
-
       if (subsets == null) {
         subsets = null;
       }
@@ -293,11 +310,11 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
   })(BaseObject);
 
   DepErr = (function(_super) {
+
     __extends(DepErr, _super);
 
     function DepErr() {
-      _ref = DepErr.__super__.constructor.apply(this, arguments);
-      return _ref;
+      return DepErr.__super__.constructor.apply(this, arguments);
     }
 
     DepErr.errors = {
@@ -315,25 +332,38 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
 }).call(this);
 }, "helpers/LinkManager": function(exports, require, module) {(function() {
   var LinkManager, _first,
-    __bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    _this = this,
     __hasProp = {}.hasOwnProperty,
     __extends = function(child, parent) { for (var key in parent) { if (__hasProp.call(parent, key)) child[key] = parent[key]; } function ctor() { this.constructor = child; } ctor.prototype = parent.prototype; child.prototype = new ctor(); child.__super__ = parent.prototype; return child; };
 
   _first = true;
 
   LinkManager = (function(_super) {
+
     __extends(LinkManager, _super);
 
     function LinkManager(history, routes) {
       var _this = this;
-
       this.history = history != null ? history : [];
       this.routes = routes != null ? routes : [];
-      this.linkAllAnchors = __bind(this.linkAllAnchors, this);
-      this.getParentAnchor = __bind(this.getParentAnchor, this);
-      this.link = __bind(this.link, this);
-      this.checkRoute = __bind(this.checkRoute, this);
-      this.setRoutes = __bind(this.setRoutes, this);
+      this.linkAllAnchors = function() {
+        return LinkManager.prototype.linkAllAnchors.apply(_this, arguments);
+      };
+      this.getParentAnchor = function(e) {
+        return LinkManager.prototype.getParentAnchor.apply(_this, arguments);
+      };
+      this.link = function(e) {
+        return LinkManager.prototype.link.apply(_this, arguments);
+      };
+      this.checkRoute = function(after) {
+        if (after == null) {
+          after = "";
+        }
+        return LinkManager.prototype.checkRoute.apply(_this, arguments);
+      };
+      this.setRoutes = function(routePatterns) {
+        return LinkManager.prototype.setRoutes.apply(_this, arguments);
+      };
       window.addEventListener("popstate", (function(e) {
         if (_first) {
           return _first = false;
@@ -345,7 +375,6 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
 
     LinkManager.prototype.setRoutes = function(routePatterns) {
       var handler, route;
-
       for (route in routePatterns) {
         handler = routePatterns[route];
         this.routes.push({
@@ -358,7 +387,6 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
 
     LinkManager.prototype.checkRoute = function(after) {
       var args, l, loc, r, res, route, routeSet, _baseLoc, _i, _len, _loc, _ref;
-
       if (after == null) {
         after = "";
       }
@@ -418,7 +446,6 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
     LinkManager.prototype.link = function(e) {
       debugger;
       var el;
-
       el = this.getParentAnchor(e.srcElement);
       if (this.checkRoute(el.getAttribute("href"))) {
         history.pushState(null, null, el.href);
@@ -438,7 +465,6 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
 
     LinkManager.prototype.linkAllAnchors = function() {
       var anchor, anchors, _i, _len, _results;
-
       anchors = document.querySelectorAll("a");
       _results = [];
       for (_i = 0, _len = anchors.length; _i < _len; _i++) {
@@ -10133,6 +10159,7 @@ function handler(event) {
   }
   (function() {
     (function() {
+    
       __out.push('<article></article>');
     
     }).call(this);
@@ -10179,6 +10206,7 @@ function handler(event) {
   }
   (function() {
     (function() {
+    
       __out.push('<article id="home">\n\t<img src="/images/Castelul_Peles_3.jpg" alt="">\t\n</article>');
     
     }).call(this);
@@ -10232,7 +10260,7 @@ function handler(event) {
       _ref = this.menu;
       for (section in _ref) {
         title = _ref[section];
-        __out.push('\n\t<li>\n\t\t<a href="/pages/');
+        __out.push('\n\t<li>\n\t\t<a href="/');
         __out.push(__sanitize(section));
         __out.push('">');
         __out.push(__sanitize(title));
