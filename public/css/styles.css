@@ -15,64 +15,68 @@ body {
 }
 html header {
   position: fixed;
-  top: 0;
   left: 0;
+  top: 0;
+  bottom: 0;
   right: 0;
-  height: 45px;
-  font-size: 18pt;
-  line-height: 45px;
-  -webkit-box-shadow: 0 0 5px #444;
-  box-shadow: 0 0 5px #444;
-  z-index: 9;
-  text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #ddd));
-  background: -webkit-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: -moz-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: -o-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: -ms-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
+  z-index: 1;
+  background: #000;
+  overflow: auto;
 }
 html header nav {
-  display: inline-block;
-  padding: 0;
-  margin: 0;
+  -webkit-box-shadow: 0 0 25px #444;
+  box-shadow: 0 0 25px #444;
+  overflow: hidden;
 }
 html header nav li {
-  list-style: none;
-  text-align: left;
   display: inline-block;
-  margin: 0;
-  padding: 0;
   float: left;
-}
-html header nav li a {
-  display: block;
-  color: #808080;
-  text-decoration: none;
-  padding: 0 10px;
-  margin: 0;
+  width: 50%;
+  height: 250px;
+  background: #fff;
+  -webkit-box-shadow: 0 0 250px #000 inset;
+  box-shadow: 0 0 250px #000 inset;
+  text-align: center;
+  line-height: 250px;
+  font-size: 24pt;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  height: 45px;
-  line-height: 45px;
-  border-left: solid 1px #fff;
-  border-right: solid 1px #ddd;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  background-image: url("/images/Castelul_Peles_3.jpg");
+  overflow: hidden;
 }
-html header nav li a:hover,
-html header nav li a:active {
-  background: rgba(0,0,0,0.1);
-  text-shadow: 0 1px 1px #fff;
+html header nav li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  color: #ccc;
+}
+html header nav li:hover a,
+html header nav li:active a {
+  color: #fff;
   text-decoration: none;
-  color: #000;
+  text-shadow: 0 1px 1px #000;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
-html header nav li:first-child a {
-  border-left: none;
-}
-html header nav li:last-child a {
-  border-right: none;
+html header nav li:hover,
+html header nav li:active {
+  -webkit-box-shadow: 0 0 250px rgba(0,0,0,0.2) inset;
+  box-shadow: 0 0 250px rgba(0,0,0,0.2) inset;
 }
 html aside {
   position: fixed;
@@ -237,60 +241,56 @@ html aside:hover>nav li:hover nav li:hover {
 }
 html section {
   position: fixed;
-  overflow: hidden;
-  top: 45px;
-  bottom: 0;
-  right: 0;
-  left: 0;
-}
-html section article {
-  position: absolute;
-  left: 0;
-  right: 0;
   top: 0;
   bottom: 0;
-  overflow: auto;
-  z-index: -1;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
+  right: 0;
+  left: 0;
+  z-index: 0;
+}
+html section article {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 0;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  max-width: 1000px;
-  padding: 25px;
-  margin: 0 auto;
-  background: #fff;
-}
-html section article#home {
-  background: urL("/images/Castelul_Peles_3.jpg") no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  width: 100%;
+  z-index: 9;
 }
 html section article.active {
-  z-index: 1;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -o-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
 }
-html section article + article {
-  -webkit-transform: translateY(100%);
-  -moz-transform: translateY(100%);
-  -o-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
+html section article div {
+  max-width: 920px;
+  padding: 20px;
+  margin: 100px auto 0;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #fff;
 }
 html body.aside-open aside {
   background-position: 0 0;
   width: 300px;
+}
+html body header li#tsunami {
+  background-image: url("/images/tsunami.jpg");
+}
+html body header li#inundatii {
+  background-image: url("/images/Floods 1.1.1.0 Tab 2 of 4_1.jpg");
+}
+html body header li#vulcani {
+  background-image: url("/images/volcano.jpg");
+}
+html body header li#cutremure {
+  background-image: url("/images/cutremure.jpg");
 }
 html ::-webkit-scrollbar {
   height: 12px;

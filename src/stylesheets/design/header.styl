@@ -10,6 +10,8 @@ header
 	nav
 		box-shadow 0 0 25px #444
 		overflow hidden
+		transition opacity 0.5s ease-in-out
+		opacity 1
 		li
 			display inline-block
 			float left
@@ -38,4 +40,5 @@ header
 				opacity 1
 			&:hover, &:active
 				box-shadow 0 0 250px rgba(0, 0, 0, 0.2) inset
-			
+&.active header nav
+	opacity 0.4

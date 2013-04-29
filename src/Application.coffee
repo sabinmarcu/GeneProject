@@ -41,12 +41,12 @@ class Application extends BaseObject
 		
 
 		_activate = (doc) -> 
-			$("body > section").addClass("active")
+			$("body").addClass("active")
 			$("article").removeClass("active")
 			$("article##{doc}").addClass("active")
 		# Setting up route scenarios
 		_scenarios =
-			root: => $("article").removeClass("active")
+			root: => $("article").removeClass("active"); $("body").removeClass("active")
 			document: (doc) => 
 				doc = doc.substr 0, doc.length - 1
 				if $("article##{doc}")[0] then _activate doc
@@ -66,8 +66,7 @@ class Application extends BaseObject
 			"vulcani": "Vulcani"
 			"tsunami": "Tsunami"
 		$("body").html DepMan.render "index", title: document.title, menu: _menu
-		$("article").click (e) -> 
-			if e.target.tagName is "ARTICLE" then $("body > section").removeClass("active")
+		$("article").click (e) -> if e.target.tagName is "ARTICLE" then LinkManager.link "/"
 		
 		
 		do LinkManager.linkAllAnchors
