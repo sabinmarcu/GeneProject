@@ -329,13 +329,12 @@ html body.aside-open aside {
   background-position: 0 0;
   width: 300px;
 }
-html body#imagini img {
-  width: 400px;
-  height: 300px;
-  float: left;
+html body#imagini article {
+  text-align: center;
 }
-html body#imagini img:nth-child(even) {
-  float: right;
+html body#imagini article img {
+  width: 250px;
+  height: 175px;
 }
 html ::-webkit-scrollbar {
   height: 12px;

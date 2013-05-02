@@ -60,92 +60,113 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
     __extends(Application, _super);
 
     function Application() {
-      var el, els, root, routes, _activate, _i, _len, _menu, _resize, _scenarios,
-        _this = this;
+      var root;
 
       root = window;
       root.echo = (require("Object")).echo;
       document.title = "GeneGenerator Project";
       (function() {
-        var meta;
+        var meta,
+          _this = this;
 
         meta = document.createElement("meta");
         meta.setAttribute("name", "viewport");
         meta.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1");
+        document.head.appendChild(meta);
+        meta = document.createElement("script");
+        meta.onload = function() {
+          var el, els, routes, _activate, _i, _len, _menu, _resize, _results, _scenarios;
+
+          root.DepMan = new (require("helpers/DependenciesManager"));
+          DepMan.lib("jquery");
+          DepMan.lib("jquery.mousewheel");
+          DepMan.stylesheet("font-awesome");
+          DepMan.stylesheet("bootstrap");
+          DepMan.stylesheet("bootstrap-responsive");
+          DepMan.googleFont("Satisfy", [400]);
+          DepMan.googleFont("Open Sans", [400, 300], ["latin", "latin-ext"]);
+          _resize = function() {
+            var html;
+
+            html = document.querySelector("html");
+            if (window.innerWidth <= 1024) {
+              if (html.className.indexOf("smallscreen") === -1) {
+                return html.className += " smallscreen";
+              }
+            } else {
+              return html.className = html.className.replace(/\ ?smallscreen/, "");
+            }
+          };
+          window.addEventListener("resize", _resize);
+          _resize();
+          root.LinkManager = new (DepMan.helper("LinkManager"));
+          _activate = function(doc) {
+            $("article").removeClass("active");
+            return $("article#" + doc).addClass("active");
+          };
+          _scenarios = {
+            root: function() {
+              return _activate("home");
+            },
+            document: function(doc) {
+              doc = doc.substr(0, doc.length - 1);
+              if ($("article#" + doc)[0]) {
+                return _activate(doc);
+              } else {
+                return _activate("404");
+              }
+            }
+          };
+          routes = {
+            "/": function() {
+              return _scenarios.root();
+            },
+            "/imagini": function() {
+              var image, source, _i, _len;
+
+              _activate("imagini");
+              source = "";
+              for (_i = 0, _len = FILES.length; _i < _len; _i++) {
+                image = FILES[_i];
+                source += "<a href='/images/" + image + "'><img src='/images/" + image + "' /></a>";
+              }
+              console.log(source);
+              return $("article#imagini").html(source);
+            },
+            "/*": function(loc) {
+              return _scenarios.document(loc[0]);
+            }
+          };
+          LinkManager.setRoutes(routes);
+          document.title = "Castelul Peleș";
+          _menu = {
+            "home": "Acasa",
+            "istoric": "Istoric",
+            "muzeu": "Muzeu",
+            "locatie": "Locatie",
+            "imagini": "Imagini",
+            "contact": "Contact"
+          };
+          $("body").html(DepMan.render("index", {
+            title: document.title,
+            menu: _menu
+          }));
+          LinkManager.linkAllAnchors();
+          LinkManager.checkRoute();
+          els = document.querySelectorAll("*");
+          console.log(els);
+          _results = [];
+          for (_i = 0, _len = els.length; _i < _len; _i++) {
+            el = els[_i];
+            _results.push(el.addEventListener("click", function(e) {
+              return console.log("Clicked", e);
+            }));
+          }
+          return _results;
+        };
+        meta.src = "/imglist";
         return document.head.appendChild(meta);
       })();
-      root.DepMan = new (require("helpers/DependenciesManager"));
-      DepMan.lib("jquery");
-      DepMan.lib("jquery.mousewheel");
-      DepMan.stylesheet("font-awesome");
-      DepMan.stylesheet("bootstrap");
-      DepMan.stylesheet("bootstrap-responsive");
-      DepMan.googleFont("Satisfy", [400]);
-      DepMan.googleFont("Open Sans", [400, 300], ["latin", "latin-ext"]);
-      _resize = function() {
-        var html;
-
-        html = document.querySelector("html");
-        if (window.innerWidth <= 1024) {
-          if (html.className.indexOf("smallscreen") === -1) {
-            return html.className += " smallscreen";
-          }
-        } else {
-          return html.className = html.className.replace(/\ ?smallscreen/, "");
-        }
-      };
-      window.addEventListener("resize", _resize);
-      _resize();
-      root.LinkManager = new (DepMan.helper("LinkManager"));
-      _activate = function(doc) {
-        $("article").removeClass("active");
-        return $("article#" + doc).addClass("active");
-      };
-      _scenarios = {
-        root: function() {
-          return _activate("home");
-        },
-        document: function(doc) {
-          doc = doc.substr(0, doc.length - 1);
-          if ($("article#" + doc)[0]) {
-            return _activate(doc);
-          } else {
-            return _activate("404");
-          }
-        }
-      };
-      routes = {
-        "/": function() {
-          return _scenarios.root();
-        },
-        "/*": function(loc) {
-          return _scenarios.document(loc[0]);
-        }
-      };
-      LinkManager.setRoutes(routes);
-      document.title = "Castelul Peleș";
-      _menu = {
-        "home": "Acasa",
-        "istoric": "Istoric",
-        "muzeu": "Muzeu",
-        "locatie": "Locatie",
-        "imagini": "Imagini",
-        "contact": "Contact"
-      };
-      $("body").html(DepMan.render("index", {
-        title: document.title,
-        menu: _menu
-      }));
-      LinkManager.linkAllAnchors();
-      LinkManager.checkRoute();
-      els = document.querySelectorAll("*");
-      console.log(els);
-      for (_i = 0, _len = els.length; _i < _len; _i++) {
-        el = els[_i];
-        el.addEventListener("click", function(e) {
-          return console.log("Clicked", e);
-        });
-      }
     }
 
     return Application;
@@ -413,7 +434,6 @@ for(var i=0;i<count;i++){counter.push(i)}return async.map(counter,iterator,callb
     };
 
     LinkManager.prototype.link = function(e) {
-      debugger;
       var el;
 
       el = this.getParentAnchor(e.srcElement);
