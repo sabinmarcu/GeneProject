@@ -19,7 +19,7 @@ html header {
   left: 0;
   right: 0;
   height: 45px;
-  font-size: 21pt;
+  font-size: 18pt;
   line-height: 45px;
   -webkit-box-shadow: 0 0 5px #444;
   box-shadow: 0 0 5px #444;
@@ -56,11 +56,23 @@ html header nav li a {
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
+  height: 45px;
+  line-height: 45px;
+  border-left: solid 1px #fff;
+  border-right: solid 1px #ddd;
 }
 html header nav li a:hover,
 html header nav li a:active {
   background: rgba(0,0,0,0.1);
   text-shadow: 0 1px 1px #fff;
+  text-decoration: none;
+  color: #000;
+}
+html header nav li:first-child a {
+  border-left: none;
+}
+html header nav li:last-child a {
+  border-right: none;
 }
 html aside {
   position: fixed;
@@ -249,14 +261,18 @@ html section article {
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  width: 1000px;
+  width: 950px;
   margin: 0 auto;
+  padding: 25px;
+}
+html section article p {
+  text-indent: 25px;
 }
 html section article#home {
   background: urL("/images/Castelul_Peles_3.jpg") no-repeat;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
   width: 100%;
 }
 html section article.active {
@@ -274,9 +290,52 @@ html section article + article {
   -ms-transform: translateY(100%);
   transform: translateY(100%);
 }
+html section article img {
+  padding: 5px;
+  background: #fff;
+  border: solid 1px #ccc;
+  margin: 5px;
+}
+html section article img.right {
+  float: right !important;
+  margin-right: none;
+}
+html section article img.left {
+  float: left !important;
+  margin-left: none;
+}
+html section article img.center {
+  margin-left: none;
+  margin-right: none;
+}
+html section article ul li {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: circle;
+  display: table;
+}
+html section article ul li img {
+  max-width: 200px;
+  max-height: 200px;
+  float: left;
+}
+html section article ul li p {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 15px;
+}
 html body.aside-open aside {
   background-position: 0 0;
   width: 300px;
+}
+html body#imagini img {
+  width: 400px;
+  height: 300px;
+  float: left;
+}
+html body#imagini img:nth-child(even) {
+  float: right;
 }
 html ::-webkit-scrollbar {
   height: 12px;

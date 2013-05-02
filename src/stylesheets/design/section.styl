@@ -15,8 +15,11 @@ section
 		z-index -1
 		transform translateY(-100%)
 		transition all 0.5s ease-in-out
-		width 1000px
+		width 950px
 		margin 0 auto
+		padding 25px
+		p
+			text-indent 25px
 		&#home 
 			background urL("/images/Castelul_Peles_3.jpg") no-repeat
 			background-size cover
@@ -26,3 +29,31 @@ section
 			transform translateY(0)
 		& + article
 			transform translateY(100%)
+		img
+			padding 5px
+			background white
+			border solid 1px #ccc
+			margin 5px
+			&.right
+				float right !important
+				margin-right none
+			&.left 
+				float left !important
+				margin-left none
+			&.center
+				margin-left none
+				margin-right none
+		ul li
+			overflow hidden
+			margin 0
+			padding 0
+			list-style circle
+			display table
+			img
+				max-width 200px
+				max-height 200px
+				float left
+			p
+				display table-cell
+				vertical-align middle
+				padding 15px

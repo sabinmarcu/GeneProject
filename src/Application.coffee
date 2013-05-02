@@ -12,68 +12,81 @@ class Application extends BaseObject
 			meta.setAttribute "name", "viewport"
 			meta.setAttribute "content", "width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1"
 			document.head.appendChild meta
+			meta = document.createElement "script"
+			meta.onload = =>	
+					root.DepMan = new ( require "helpers/DependenciesManager" )
 
-		root.DepMan = new ( require "helpers/DependenciesManager" )
+					#jQuery
+					DepMan.lib "jquery"
+					DepMan.lib "jquery.mousewheel"
 
-		#jQuery
-		DepMan.lib "jquery"
-		DepMan.lib "jquery.mousewheel"
+					# FontAwesome
+					DepMan.stylesheet "font-awesome"
+					DepMan.stylesheet "bootstrap"
+					DepMan.stylesheet "bootstrap-responsive"
 
-		# FontAwesome
-		DepMan.stylesheet "font-awesome"
-		DepMan.stylesheet "bootstrap"
-		DepMan.stylesheet "bootstrap-responsive"
+					# Fonts
+					DepMan.googleFont "Satisfy", [400]
+					DepMan.googleFont "Open Sans", [400, 300], ["latin", "latin-ext"]
 
-		# Fonts
-		DepMan.googleFont "Satisfy", [400]
-		DepMan.googleFont "Open Sans", [400, 300], ["latin", "latin-ext"]
+					_resize = ->
+						html = document.querySelector "html"
+						if window.innerWidth <= 1024
+							if html.className.indexOf("smallscreen") is -1 then html.className += " smallscreen"
+						else html.className = html.className.replace /\ ?smallscreen/, ""
+					window.addEventListener "resize", _resize
+					do _resize
 
-		_resize = ->
-			html = document.querySelector "html"
-			if window.innerWidth <= 1024
-				if html.className.indexOf("smallscreen") is -1 then html.className += " smallscreen"
-			else html.className = html.className.replace /\ ?smallscreen/, ""
-		window.addEventListener "resize", _resize
-		do _resize
+					# Routing Manager
+					root.LinkManager = new ( DepMan.helper "LinkManager" )
+					
 
-		# Routing Manager
-		root.LinkManager = new ( DepMan.helper "LinkManager" )
-		
+					_activate = (doc) -> $("article").removeClass("active"); $("article##{doc}").addClass("active")
+					# Setting up route scenarios
+					_scenarios =
+						root: => _activate "home"
+						document: (doc) => 
+							doc = doc.substr 0, doc.length - 1
+							if $("article##{doc}")[0] then _activate doc
+							else _activate "404"
 
-		_activate = (doc) -> $("article").removeClass("active"); $("article##{doc}").addClass("active")
-		# Setting up route scenarios
-		_scenarios =
-			root: => _activate "home"
-			document: (doc) => 
-				doc = doc.substr 0, doc.length - 1
-				if $("article##{doc}")[0] then _activate doc
-				else _activate "404"
+					# Setting up routes
+					routes =
+						"/": => do _scenarios.root
+						"/imagini": => 
+							_activate "imagini" 
+							source = ""
+							source += "<a href='/images/#{image}'><img src='/images/#{image}' /></a>" for image in FILES
+							console.log source
+							$("article#imagini").html source
+						"/*": (loc) => _scenarios.document loc[0]
+					LinkManager.setRoutes routes
 
-		# Setting up routes
-		routes =
-			"/": => do _scenarios.root
-			"/*": (loc) => _scenarios.document loc[0]
-		LinkManager.setRoutes routes
+					# Bootstrap it all
+					document.title = "Castelul Peleș"
+					_menu = 
+						"home": "Acasa"
+						"istoric": "Istoric"
+						"muzeu": "Muzeu"
+						"locatie": "Locatie"
+						"imagini": "Imagini"
+						"contact": "Contact"
+					$("body").html DepMan.render "index", title: document.title, menu: _menu
+					do LinkManager.linkAllAnchors
 
-		# Bootstrap it all
-		document.title = "Castelul Peleș"
-		_menu = 
-			"home": "Acasa"
-			"istoric": "Istoric"
-			"locatie": "Locatie"
-			"personalitati": "Personalitati"
-			"imagini": "Imagini"
-			"contact": "Contact"
-		$("body").html DepMan.render "index", title: document.title, menu: _menu
-		do LinkManager.linkAllAnchors
+					do LinkManager.checkRoute
 
-		do LinkManager.checkRoute
+					# Solution for Apple's iOS bullshit hover crap
+					els = document.querySelectorAll("*")
+					console.log els
+					el.addEventListener("click", (e) -> console.log "Clicked", e) for el in els
 
-		# Solution for Apple's iOS bullshit hover crap
-		els = document.querySelectorAll("*")
-		console.log els
-		el.addEventListener("click", (e) -> console.log "Clicked", e) for el in els
 
+
+			meta.src = "/imglist"
+			document.head.appendChild meta
+
+	
 
 module.exports = Application
 
