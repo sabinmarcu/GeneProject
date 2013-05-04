@@ -1,9 +1,12 @@
-<header><%- DepMan.render "_menu", menu: @menu %></header>
+<header>
+	<h1>Dezastre Naturale</h1>
+	<%- DepMan.render "_menu", menu: @menu %>
+</header>
 <aside></aside>
 <section>
 	<% for section, title of @menu : %>
 		<article id="<%= section %>">
-			<div><%- DepMan.doc section %></div>
+			<div><div><%- DepMan.doc section %></div></div>
 		</article>
 	<% end %>
 </section>

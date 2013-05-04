@@ -65,6 +65,8 @@ class Application extends BaseObject
 			"inundatii": "Inundații"
 			"vulcani": "Vulcani"
 			"tsunami": "Tsunami"
+			"seceta": "Seceta"
+			"tornade": "Tornade"
 		$("body").html DepMan.render "index", title: document.title, menu: _menu
 		$("article").click (e) -> if e.target.tagName is "ARTICLE" then LinkManager.link "/"
 		

@@ -1,2 +1,52 @@
 @import "aside-open"
 @import "items"
+
+.right
+	margin-right 0
+	float right
+	clear right
+.left
+	margin-left 0
+	float left
+	clear left
+.center
+	clear both
+	text-align center
+	margin 0 auto
+	overflow hidden
+img 
+	margin 15px
+	background white
+	border solid 1px #ccc
+	border-radius 5px
+	padding 5px
+figure
+	background white
+	border-radius 5px 
+	border solid 1px #ccc
+	padding 10px
+	text-align center
+	display table
+	width 1px
+	figcaption
+		text-align center
+		margin 10px 0 0
+		padding 5px
+		font-size 10pt
+	img
+		border none
+		background black
+		padding 0
+		margin 0 0 10px
+		display inline
+	* 
+		vertical-align bottom
+		display table-row
+		max-width 880px
+	&.right *, &.left *
+		max-width 200px
+.center figure.center
+		width 22%
+		float left
+		clear none
+		height 150px

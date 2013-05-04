@@ -13,7 +13,7 @@ body {
   height: 100%;
   width: 100%;
 }
-html header {
+html body header {
   position: fixed;
   left: 0;
   top: 0;
@@ -23,12 +23,30 @@ html header {
   background: #000;
   overflow: auto;
 }
-html header nav {
-  -webkit-box-shadow: 0 0 25px #444;
-  box-shadow: 0 0 25px #444;
-  overflow: hidden;
+html body header h1 {
+  height: 200px;
+  background: #222;
+  text-align: center;
+  line-height: 200px;
+  margin: 0;
+  padding: 0;
+  -webkit-box-shadow: 0 0 250px #000 inset;
+  box-shadow: 0 0 250px #000 inset;
+  color: #ccc;
+  font-size: 42pt;
 }
-html header nav li {
+html body header nav {
+  overflow: hidden;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  -ms-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
+html body header nav li {
   display: inline-block;
   float: left;
   width: 50%;
@@ -49,8 +67,11 @@ html header nav li {
   background-size: cover;
   background-image: url("/images/Castelul_Peles_3.jpg");
   overflow: hidden;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
 }
-html header nav li a {
+html body header nav li a {
   display: block;
   width: 100%;
   height: 100%;
@@ -62,23 +83,29 @@ html header nav li a {
   opacity: 0;
   filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  text-shadow: 0 0 5px #000;
   color: #ccc;
 }
-html header nav li:hover a,
-html header nav li:active a {
+html body header nav li:hover a,
+html body header nav li:active a {
   color: #fff;
   text-decoration: none;
-  text-shadow: 0 1px 1px #000;
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-html header nav li:hover,
-html header nav li:active {
-  -webkit-box-shadow: 0 0 250px rgba(0,0,0,0.2) inset;
-  box-shadow: 0 0 250px rgba(0,0,0,0.2) inset;
+html body header nav li:hover,
+html body header nav li:active {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
 }
-html aside {
+html body.active header nav {
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+}
+html body aside {
   position: fixed;
   left: 0;
   top: 0;
@@ -106,14 +133,14 @@ html aside {
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
   z-index: 9;
 }
-html aside>* {
+html body aside>* {
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-html aside>i {
+html body aside>i {
   line-height: 45px !important;
   height: 45px !important;
   width: 45px !important;
@@ -126,22 +153,22 @@ html aside>i {
   left: 0;
   position: absolute;
 }
-html aside>nav {
+html body aside>nav {
   display: none;
 }
-html aside:hover {
+html body aside:hover {
   height: 100%;
   bottom: 0;
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-html aside:hover>i {
+html body aside:hover>i {
   opacity: 0;
   filter: alpha(opacity=0);
   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
-html aside:hover>nav {
+html body aside:hover>nav {
   display: block;
   background: #fff;
   position: absolute;
@@ -155,10 +182,10 @@ html aside:hover>nav {
   -webkit-box-shadow: 0 0 5px #444;
   box-shadow: 0 0 5px #444;
 }
-html aside:hover>nav nav {
+html body aside:hover>nav nav {
   display: none;
 }
-html aside:hover>nav li {
+html body aside:hover>nav li {
   list-style: none;
   display: block;
   opacity: 0.4;
@@ -176,23 +203,23 @@ html aside:hover>nav li {
   -ms-transition: opacity 0.75s ease-in-out;
   transition: opacity 0.75s ease-in-out;
 }
-html aside:hover>nav li>i {
+html body aside:hover>nav li>i {
   width: 45px !important;
   height: 45px !important;
   text-align: center;
   line-height: 45px;
   background: #fff;
 }
-html aside:hover>nav li:hover {
+html body aside:hover>nav li:hover {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-html aside:hover>nav li:hover>i {
+html body aside:hover>nav li:hover>i {
   color: #fff;
   background: #808080;
 }
-html aside:hover>nav li:hover nav {
+html body aside:hover>nav li:hover nav {
   display: block;
   position: absolute;
   left: 45px;
@@ -202,7 +229,7 @@ html aside:hover>nav li:hover nav {
   border: solid 1px #c4c4c4;
   border-left: none;
 }
-html aside:hover>nav li:hover nav li {
+html body aside:hover>nav li:hover nav li {
   display: block;
   padding: 0;
   opacity: 0.8;
@@ -219,62 +246,80 @@ html aside:hover>nav li:hover nav li {
   -ms-transition: color 0.5s ease-in-out;
   transition: color 0.5s ease-in-out;
 }
-html aside:hover>nav li:hover nav li a,
-html aside:hover>nav li:hover nav li a:visited,
-html aside:hover>nav li:hover nav li a:hover,
-html aside:hover>nav li:hover nav li a:link {
+html body aside:hover>nav li:hover nav li a,
+html body aside:hover>nav li:hover nav li a:visited,
+html body aside:hover>nav li:hover nav li a:hover,
+html body aside:hover>nav li:hover nav li a:link {
   display: block;
   height: 100%;
   width: 100%;
   color: inherit;
   text-decoration: none;
 }
-html aside:hover>nav li:hover nav li:first-child {
+html body aside:hover>nav li:hover nav li:first-child {
   background: #808080;
   color: #bfbfbf;
 }
-html aside:hover>nav li:hover nav li:first-child:hover {
+html body aside:hover>nav li:hover nav li:first-child:hover {
   color: #fff;
 }
-html aside:hover>nav li:hover nav li:hover {
+html body aside:hover>nav li:hover nav li:hover {
   color: #000;
 }
-html section {
+html body section {
   position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   z-index: 0;
-}
-html section article {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 0;
+  overflow: hidden;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  z-index: 9;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -o-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  transform: translateY(100%);
 }
-html section article.active {
+html body section article {
+  position: fixed;
+  top: 100%;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9;
+  padding-top: 100px;
+}
+html body section article.active {
+  top: 0;
+}
+html body section article > div {
+  max-width: 920px;
+  padding: 0 20px;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  background: #fff;
+  overflow-y: auto;
+  margin: 0 auto;
+}
+html body section article > div > *:first-child {
+  margin-top: 25px;
+}
+html body section article > div > *:last-child {
+  margin-bottom: 25px;
+}
+html body.active section {
+  z-index: 2;
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -o-transform: translateY(0);
   -ms-transform: translateY(0);
   transform: translateY(0);
-}
-html section article div {
-  max-width: 920px;
-  padding: 20px;
-  margin: 100px auto 0;
-  height: 100%;
-  border-top-left-radius: 5px;
-  border-top-right-radius: 5px;
-  background: #fff;
 }
 html body.aside-open aside {
   background-position: 0 0;
@@ -292,14 +337,82 @@ html body header li#vulcani {
 html body header li#cutremure {
   background-image: url("/images/cutremure.jpg");
 }
-html ::-webkit-scrollbar {
+html body header li#seceta {
+  background-image: url("/images/seceta-cover.jpg");
+}
+html body header li#tornade {
+  background-image: url("/images/tornade.jpg");
+}
+html body .right {
+  margin-right: 0;
+  float: right;
+  clear: right;
+}
+html body .left {
+  margin-left: 0;
+  float: left;
+  clear: left;
+}
+html body .center {
+  clear: both;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+html body img {
+  margin: 15px;
+  background: #fff;
+  border: solid 1px #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+html body figure {
+  background: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  padding: 10px;
+  text-align: center;
+  display: table;
+  width: 1px;
+}
+html body figure figcaption {
+  text-align: center;
+  margin: 10px 0 0;
+  padding: 5px;
+  font-size: 10pt;
+}
+html body figure img {
+  border: none;
+  background: #000;
+  padding: 0;
+  margin: 0 0 10px;
+  display: inline;
+}
+html body figure * {
+  vertical-align: bottom;
+  display: table-row;
+  max-width: 880px;
+}
+html body figure.right *,
+html body figure.left * {
+  max-width: 200px;
+}
+html body .center figure.center {
+  width: 22%;
+  float: left;
+  clear: none;
+  height: 150px;
+}
+html body ::-webkit-scrollbar {
   height: 12px;
   width: 12px;
 }
-html ::-webkit-scrollbar-track {
+html body ::-webkit-scrollbar-track {
   background: transparent;
 }
-html ::-webkit-scrollbar-thumb {
+html body ::-webkit-scrollbar-thumb {
   background: #e6e6e6;
   -webkit-transition: background 0.5s ease-in-out;
   -moz-transition: background 0.5s ease-in-out;
@@ -307,6 +420,6 @@ html ::-webkit-scrollbar-thumb {
   -ms-transition: background 0.5s ease-in-out;
   transition: background 0.5s ease-in-out;
 }
-html ::-webkit-scrollbar-thumb:hover {
+html body ::-webkit-scrollbar-thumb:hover {
   background: #ccc;
 }
