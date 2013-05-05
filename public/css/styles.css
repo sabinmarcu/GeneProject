@@ -5,8 +5,7 @@ html {
   height: 100%;
 }
 body {
-  background: #fff;
-  text: #000;
+  background: #000;
   font-family: "Open Sans", Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -25,12 +24,12 @@ html header {
   box-shadow: 0 0 5px #444;
   z-index: 9;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #ddd));
-  background: -webkit-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: -moz-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: -o-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: -ms-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,255,255,0.1)), color-stop(0.5, rgba(255,255,255,0.1)), color-stop(1, rgba(255,255,255,0.2))) #400;
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%) #400;
+  background: -moz-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%) #400;
+  background: -o-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%) #400;
+  background: -ms-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%) #400;
+  background: linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%) #400;
 }
 html header nav {
   display: inline-block;
@@ -47,7 +46,7 @@ html header nav li {
 }
 html header nav li a {
   display: block;
-  color: #808080;
+  color: #ccc;
   text-decoration: none;
   padding: 0 10px;
   margin: 0;
@@ -63,10 +62,10 @@ html header nav li a {
 }
 html header nav li a:hover,
 html header nav li a:active {
-  background: rgba(0,0,0,0.1);
-  text-shadow: 0 1px 1px #fff;
+  background: rgba(0,0,0,0.4);
+  text-shadow: 0 1px 1px #000;
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 html header nav li:first-child a {
   border-left: none;
@@ -269,10 +268,10 @@ html section article p {
   text-indent: 25px;
 }
 html section article#home {
-  background: urL("/images/Castelul_Peles_3.jpg") no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  background: urL("/images/7379.jpg") no-repeat center center;
+  -webkit-background-size: stretch;
+  -moz-background-size: stretch;
+  background-size: stretch;
   width: 100%;
 }
 html section article.active {
