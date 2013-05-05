@@ -70,6 +70,8 @@ class Application extends BaseObject
 						"stema": "Stema Clubului"
 						"culori": "Culorile Echipei"
 						"stadion": "Stadionul Echipei"
+						"echipa": "Lotul Echipei"
+						"echipa_tehnica": "Echipa Tehnica"
 					$("body").html DepMan.render "index", title: document.title, menu: _menu
 					do LinkManager.linkAllAnchors
 
