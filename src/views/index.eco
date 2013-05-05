@@ -1,11 +1,16 @@
 <header>
-	<h1>Dezastre Naturale</h1>
+	<h1><%= document.title %></h1>
 	<%- DepMan.render "_menu", menu: @menu %>
 </header>
 <aside></aside>
 <section>
 	<% for section, title of @menu : %>
 		<article id="<%= section %>">
+			<div><div><%- DepMan.doc section %></div></div>
+		</article>
+	<% end %>
+	<% for section in @altmenu : %>
+		<article id="<%= section.replace /\//g, "_" %>">
 			<div><div><%- DepMan.doc section %></div></div>
 		</article>
 	<% end %>

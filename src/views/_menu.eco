@@ -1,7 +1,8 @@
 <nav>
+	<img src="/images/harta.png" alt="">
 	<% for section, title of @menu :  %>
 	<li id="<%= section %>">
-		<a href="/<%= section %>"><%= title %></a>
+		<a href="/<%= section %>"><img src="/images/<%= section %>.png" alt=""></a>
 	</li>
 	<% end %>
 </nav>

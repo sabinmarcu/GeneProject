@@ -48,26 +48,69 @@ class Application extends BaseObject
 		_scenarios =
 			root: => $("article").removeClass("active"); $("body").removeClass("active")
 			document: (doc) => 
-				doc = doc.substr 0, doc.length - 1
-				if $("article##{doc}")[0] then _activate doc
+				doc = doc.substr 0, doc.length - 1 if doc[doc.length - 1] is "/"
+				doc = doc.replace /\//g, "_"
+				article = $("article##{doc}")
+				if article and article[0] then _activate doc
 				else _activate "404"
 
 		# Setting up routes
 		routes =
 			"/": => do _scenarios.root
 			"/*": (loc) => _scenarios.document loc[0]
+			"/*/*": (loc) => _scenarios.document "#{loc[0]}/#{loc1}"
 		LinkManager.setRoutes routes
 
 		# Bootstrap it all
-		document.title = "Dezastre Naturale"
+		document.title	= "Manastiri"
 		_menu = 
-			"cutremure": "Cutremure"
-			"inundatii": "Inundații"
-			"vulcani": "Vulcani"
-			"tsunami": "Tsunami"
-			"seceta": "Seceta"
-			"tornade": "Tornade"
-		$("body").html DepMan.render "index", title: document.title, menu: _menu
+			"muntenia": "Muntenia"
+			"transilvania": "Transilvania"
+			"banat": "Banat"
+			"oltenia": "Oltenia"
+			"crisana": "Crisana"
+			"maramures": "Maramures"
+			"bucovina": "Bucovina"
+			"moldova": "Moldova"
+			"dobrogea": "Dobrogea"
+		_altmenu = [
+			"bucovina/sucevita"
+			"bucovina/putna"
+			"bucovina/voronet"
+
+			"transilvania/dintrunlemn"
+			"transilvania/oasa"
+			"transilvania/sambatadesus"
+
+			"oltenia/brancoveni"
+			"oltenia/caluiu"
+			"oltenia/clocociov"
+
+			"muntenia/cernica"
+			"muntenia/dealu"
+			"muntenia/zamfira"
+
+			"moldova/barnova"
+			"moldova/secu"
+			"moldova/sihastria"
+
+			"maramures/barsana"
+			"maramures/sapantaperi"
+			"maramures/sfantatreime"
+
+			"dobrogea/celicdere"
+			"dobrogea/cocos"
+			"dobrogea/halmyris"
+
+			"crisana/bunavestire"
+			"crisana/feredu"
+			"crisana/gai"
+
+			"banat/nera"
+			"banat/piatrascrisa"
+			"banat/teius"
+		]
+		$("body").html DepMan.render "index", title: document.title, menu: _menu, altmenu: _altmenu
 		$("article").click (e) -> if e.target.tagName is "ARTICLE" then LinkManager.link "/"
 		
 		

@@ -45,12 +45,14 @@ class LinkManager extends BaseObject
 		return false
 
 	link: (e) =>
+		debugger
 		if e.substr? then _l = e
 		else
 			el = @getParentAnchor e.srcElement
 			_l = el.getAttribute "href"
 		if @checkRoute(_l) then history.pushState null, null, _l
 		e.preventDefault?()
+		false
 
 	getParentAnchor: (e) =>
 		return null if not e?

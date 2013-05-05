@@ -20,90 +20,58 @@ html body header {
   bottom: 0;
   right: 0;
   z-index: 1;
-  background: #000;
   overflow: auto;
+  background: #000;
 }
 html body header h1 {
-  height: 200px;
-  background: #222;
-  text-align: center;
-  line-height: 200px;
-  margin: 0;
-  padding: 0;
-  -webkit-box-shadow: 0 0 250px #000 inset;
-  box-shadow: 0 0 250px #000 inset;
-  color: #ccc;
-  font-size: 42pt;
+  display: none;
 }
 html body header nav {
-  overflow: hidden;
+  background: #fff;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
   -ms-transition: opacity 0.5s ease-in-out;
   transition: opacity 0.5s ease-in-out;
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
+}
+html body header nav img {
+  border: none;
+  background: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: 600px;
+  height: 412px;
+  margin: -206px 0 0 -300px;
+  padding: 0;
+  opacity: 0.3;
+  filter: alpha(opacity=30);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
 }
 html body header nav li {
-  display: inline-block;
-  float: left;
-  width: 50%;
-  height: 250px;
-  background: #fff;
-  -webkit-box-shadow: 0 0 250px #000 inset;
-  box-shadow: 0 0 250px #000 inset;
-  text-align: center;
-  line-height: 250px;
-  font-size: 24pt;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  background-image: url("/images/Castelul_Peles_3.jpg");
-  overflow: hidden;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  list-style: none;
 }
-html body header nav li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  opacity: 0;
-  filter: alpha(opacity=0);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-  text-shadow: 0 0 5px #000;
-  color: #ccc;
+html body header nav li img {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
 }
-html body header nav li:hover a,
-html body header nav li:active a {
-  color: #fff;
-  text-decoration: none;
+html body header nav li img:hover {
   opacity: 1;
   -ms-filter: none;
   filter: none;
 }
-html body header nav li:hover,
-html body header nav li:active {
-  opacity: 1;
-  -ms-filter: none;
-  filter: none;
-}
-html body.active header nav {
-  opacity: 0.4;
-  filter: alpha(opacity=40);
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=40)";
+html body.active nav {
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
 }
 html body aside {
   position: fixed;
@@ -325,23 +293,107 @@ html body.aside-open aside {
   background-position: 0 0;
   width: 300px;
 }
-html body header li#tsunami {
-  background-image: url("/images/tsunami.jpg");
+html body header li img {
+  display: none;
 }
-html body header li#inundatii {
-  background-image: url("/images/Floods 1.1.1.0 Tab 2 of 4_1.jpg");
+html body header li#dobrogea img {
+  display: block;
+  width: 138px;
+  height: 149px;
+  margin: -74.5px 0 -69px;
+  -webkit-transform: translateX(129px) translateY(113px);
+  -moz-transform: translateX(129px) translateY(113px);
+  -o-transform: translateX(129px) translateY(113px);
+  -ms-transform: translateX(129px) translateY(113px);
+  transform: translateX(129px) translateY(113px);
 }
-html body header li#vulcani {
-  background-image: url("/images/volcano.jpg");
+html body header li#muntenia img {
+  display: block;
+  width: 232px;
+  height: 184px;
+  margin: -92px 0 -116px;
+  -webkit-transform: translateX(-59px) translateY(102px);
+  -moz-transform: translateX(-59px) translateY(102px);
+  -o-transform: translateX(-59px) translateY(102px);
+  -ms-transform: translateX(-59px) translateY(102px);
+  transform: translateX(-59px) translateY(102px);
 }
-html body header li#cutremure {
-  background-image: url("/images/cutremure.jpg");
+html body header li#oltenia img {
+  display: block;
+  width: 187px;
+  height: 166px;
+  margin: -83px 0 -93.5px;
+  -webkit-transform: translateX(-209px) translateY(112px);
+  -moz-transform: translateX(-209px) translateY(112px);
+  -o-transform: translateX(-209px) translateY(112px);
+  -ms-transform: translateX(-209px) translateY(112px);
+  transform: translateX(-209px) translateY(112px);
 }
-html body header li#seceta {
-  background-image: url("/images/seceta-cover.jpg");
+html body header li#banat img {
+  display: block;
+  width: 135px;
+  height: 160px;
+  margin: -80px 0 -67.5px;
+  -webkit-transform: translateX(-292px) translateY(37px);
+  -moz-transform: translateX(-292px) translateY(37px);
+  -o-transform: translateX(-292px) translateY(37px);
+  -ms-transform: translateX(-292px) translateY(37px);
+  transform: translateX(-292px) translateY(37px);
 }
-html body header li#tornade {
-  background-image: url("/images/tornade.jpg");
+html body header li#crisana img {
+  display: block;
+  width: 92px;
+  height: 115px;
+  margin: -57.5px 0 -46px;
+  -webkit-transform: translateX(-237px) translateY(-85px);
+  -moz-transform: translateX(-237px) translateY(-85px);
+  -o-transform: translateX(-237px) translateY(-85px);
+  -ms-transform: translateX(-237px) translateY(-85px);
+  transform: translateX(-237px) translateY(-85px);
+}
+html body header li#maramures img {
+  display: block;
+  width: 160px;
+  height: 70px;
+  margin: -35px 0 -80px;
+  -webkit-transform: translateX(-182px) translateY(-146px);
+  -moz-transform: translateX(-182px) translateY(-146px);
+  -o-transform: translateX(-182px) translateY(-146px);
+  -ms-transform: translateX(-182px) translateY(-146px);
+  transform: translateX(-182px) translateY(-146px);
+}
+html body header li#bucovina img {
+  display: block;
+  width: 94px;
+  height: 74px;
+  margin: -37px 0 -47px;
+  -webkit-transform: translateX(-29px) translateY(-132px);
+  -moz-transform: translateX(-29px) translateY(-132px);
+  -o-transform: translateX(-29px) translateY(-132px);
+  -ms-transform: translateX(-29px) translateY(-132px);
+  transform: translateX(-29px) translateY(-132px);
+}
+html body header li#moldova img {
+  display: block;
+  width: 162px;
+  height: 245px;
+  margin: -122.5px 0 -81px;
+  -webkit-transform: translateX(13px) translateY(-73px);
+  -moz-transform: translateX(13px) translateY(-73px);
+  -o-transform: translateX(13px) translateY(-73px);
+  -ms-transform: translateX(13px) translateY(-73px);
+  transform: translateX(13px) translateY(-73px);
+}
+html body header li#transilvania img {
+  display: block;
+  width: 253px;
+  height: 191px;
+  margin: -95.5px 0 -126.5px;
+  -webkit-transform: translateX(-187px) translateY(-37px);
+  -moz-transform: translateX(-187px) translateY(-37px);
+  -o-transform: translateX(-187px) translateY(-37px);
+  -ms-transform: translateX(-187px) translateY(-37px);
+  transform: translateX(-187px) translateY(-37px);
 }
 html body .right {
   margin-right: 0;
