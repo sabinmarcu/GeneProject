@@ -13,22 +13,84 @@ section
 		bottom 0
 		overflow auto
 		z-index -1
-		transform translateY(-100%)
 		transition all 0.5s ease-in-out
 		width 950px
 		margin 0 auto
 		padding 25px
 		p
 			text-indent 25px
+		.right
+			margin-right 0
+			float right
+			clear right
+		.left
+			margin-left 0
+			float left
+			clear left
+		.center
+			clear both
+			text-align center
+			margin 0 auto
+			overflow hidden
+		img 
+			margin 15px
+			background white
+			border solid 1px #ccc
+			border-radius 5px
+			padding 5px
+		figure
+			background white
+			border-radius 5px 
+			border solid 1px #ccc
+			padding 10px
+			text-align center
+			display table
+			width 1px
+			figcaption
+				text-align center
+				margin 10px 0 0
+				padding 5px
+				font-size 10pt
+			img
+				border none
+				padding 0
+				margin 0 0 10px
+				display inline
+			* 
+				vertical-align bottom
+				display table-row
+				max-width 880px
+			&.right *, &.left *
+				max-width 200px
+			&.right.big, &.left.big
+				border none
+				*
+					max-width 500px
+		.center figure.center
+				width 22%
+				float left
+				clear none
+				height 150px
 		&#home 
-			background urL("/images/Castelul_Peles_3.jpg") no-repeat
-			background-size cover
+			background urL("/images/7379.jpg") no-repeat center center
+			background-size stretch
 			width 100%
 		&.active
 			z-index 1
-			transform translateY(0)
-		& + article
-			transform translateY(100%)
+			transform translateX(0)
+		transform translateX(-150%)
+		&.active + article
+			transform translateX(150%)
+		&.active + article + article
+			transform translateX(200%)
+		&.active + article + article + article
+			transform translateX(250%)
+		&.active + article + article + article + article
+			transform translateX(300%)
+		&.active + article + article + article + article + article
+			transform translateX(350%)
+		&.active + article + article + article + article + article + article
+			transform translateX(400%)
 		img
 			padding 5px
 			background white
@@ -57,3 +119,25 @@ section
 				display table-cell
 				vertical-align middle
 				padding 15px
+		table
+			width 100%
+			background #300
+			margin-top 25px
+			tr
+				background rgba(256, 256, 256, 0.1)
+				&:nth-child(odd)
+					background rgba(256, 256, 256, 0.15)
+				td, th
+					padding 5px
+					border-right solid 1px white
+					border-bottom solid 1px white
+					color #ccc
+					transition all 0.5s ease-in-out
+					&:hover
+						color #fff
+					&:last-child
+						border-right none
+				th
+					background rgba(0, 0, 0, 0)
+					color white
+					font-size 1.2em
