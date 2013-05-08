@@ -5,18 +5,21 @@ section
 	bottom 0
 	right 0
 	left 0
+	perspective 600
 	article
 		position absolute
 		left 0
 		right 0
 		top 0
-		bottom 0
+		bottom 15px
 		overflow auto
 		z-index -1
-		transition all 0.5s ease-in-out
+		transition all 1s ease-in-out
 		width 950px
 		margin 0 auto
 		padding 25px
+		border-bottom-right-radius 10px
+		border-bottom-left-radius 10px
 		p
 			text-indent 25px
 		.right
@@ -71,26 +74,35 @@ section
 				float left
 				clear none
 				height 150px
+		transform rotateX(-90deg)
+		transform-origin center top
+		box-shadow 0 0 10px #444
+		background #fec
 		&#home 
-			background urL("/images/7379.jpg") no-repeat center center
-			background-size stretch
+			background url("/images/home.jpg") no-repeat center center white
+			background-size contain
+			transform-origin center bottom
+			transform rotateX(180deg)
+			bottom 0
+			border-radius none
 			width 100%
 		&.active
 			z-index 1
-			transform translateX(0)
-		transform translateX(-150%)
+			transform rotateX(0) !important
 		&.active + article
-			transform translateX(150%)
+			transform rotateX(90deg)
 		&.active + article + article
-			transform translateX(200%)
+			transform rotateX(90deg)
 		&.active + article + article + article
-			transform translateX(250%)
+			transform rotateX(90deg)
 		&.active + article + article + article + article
-			transform translateX(300%)
+			transform rotateX(90deg)	
 		&.active + article + article + article + article + article
-			transform translateX(350%)
+			transform rotateX(90deg)	
 		&.active + article + article + article + article + article + article
-			transform translateX(400%)
+			transform rotateX(90deg)	
+		&.active + article + article + article + article + article + article + article
+			transform rotateX(90deg)	
 		img
 			padding 5px
 			background white

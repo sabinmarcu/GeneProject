@@ -63,15 +63,15 @@ class Application extends BaseObject
 					LinkManager.setRoutes routes
 
 					# Bootstrap it all
-					document.title = "Liverpool"
+					document.title = "Mitologie"
 					_menu = 
 						"home": "Acasa"
-						"istoric": "Istoric"
-						"stema": "Stema Clubului"
-						"culori": "Culorile Echipei"
-						"stadion": "Stadionul Echipei"
-						"echipa": "Lotul Echipei"
-						"echipa_tehnica": "Echipa Tehnica"
+						"grecia": "Grecia Antica"
+						"egipt": "Egiptul Antic"
+						"nord": "Nordul Europei"
+						"america": "Civilizatiile Ameridiene"
+						"china": "China"
+						"japonia": "Japonia"
 					$("body").html DepMan.render "index", title: document.title, menu: _menu
 					do LinkManager.linkAllAnchors
 

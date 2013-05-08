@@ -18,7 +18,7 @@ html header {
   left: 0;
   right: 0;
   height: 45px;
-  font-size: 18pt;
+  font-size: 14pt;
   line-height: 45px;
   -webkit-box-shadow: 0 0 15px #444;
   box-shadow: 0 0 15px #444;
@@ -322,6 +322,14 @@ html section article figure.right *,
 html section article figure.left * {
   max-width: 200px;
 }
+html section article figure.right.big,
+html section article figure.left.big {
+  border: none;
+}
+html section article figure.right.big *,
+html section article figure.left.big * {
+  max-width: 500px;
+}
 html section article .center figure.center {
   width: 22%;
   float: left;
@@ -371,6 +379,20 @@ html section article.active + article + article + article + article {
   -ms-transform: translateX(300%);
   transform: translateX(300%);
 }
+html section article.active + article + article + article + article + article {
+  -webkit-transform: translateX(350%);
+  -moz-transform: translateX(350%);
+  -o-transform: translateX(350%);
+  -ms-transform: translateX(350%);
+  transform: translateX(350%);
+}
+html section article.active + article + article + article + article + article + article {
+  -webkit-transform: translateX(400%);
+  -moz-transform: translateX(400%);
+  -o-transform: translateX(400%);
+  -ms-transform: translateX(400%);
+  transform: translateX(400%);
+}
 html section article img {
   padding: 5px;
   background: #fff;
@@ -405,6 +427,42 @@ html section article ul li p {
   display: table-cell;
   vertical-align: middle;
   padding: 15px;
+}
+html section article table {
+  width: 100%;
+  background: #300;
+  margin-top: 25px;
+}
+html section article table tr {
+  background: rgba(255,255,255,0.1);
+}
+html section article table tr:nth-child(odd) {
+  background: rgba(255,255,255,0.15);
+}
+html section article table tr td,
+html section article table tr th {
+  padding: 5px;
+  border-right: solid 1px #fff;
+  border-bottom: solid 1px #fff;
+  color: #ccc;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+html section article table tr td:hover,
+html section article table tr th:hover {
+  color: #fff;
+}
+html section article table tr td:last-child,
+html section article table tr th:last-child {
+  border-right: none;
+}
+html section article table tr th {
+  background: rgba(0,0,0,0);
+  color: #fff;
+  font-size: 1.2em;
 }
 html body.aside-open aside {
   background-position: 0 0;
