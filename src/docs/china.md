@@ -1,0 +1,15 @@
+<figure class="right">
+	<img src="/images/nufa.jpg" alt="">
+	<figcaption>Imagine reprezentându-i pe Nu Wa și Fu Xi, cele două zeități cu cozi de dragon, care contribuie la reconstruirea lumii după potop.</figcaption>
+</figure>
+# China
+
+În mitologia chineză, la începuturile lumii, Cerul și Pământul formau un haos asemănător unui ou. Din acest haos se naște Pan ku (Pangu), un antropomorf primordial, care spărgând oul în două jumătăți formează cerul și pământul. Cu cât Pan ku creștea mai înalt cu atât cele două jumătăți ale lumii erau tot mai mult îndepărtate. După moartea sa, trupul lui formează lumea: capul lui devine un munte sfânt, din ochii lui se nasc Soarele și Luna, din grăsimea lui apar mările și fluviile, iar părul lui ia forma arborilor și a vegetalelor.
+O altă legendă chineză vorbește despre zeul Di. Acesta îl însărcinează pe Zhong Li să rupă legătura dintre cer și pământ pentru a împiedica zeii și spiritele care descindeau pe pământ să-i asuprească pe oameni. Datorită apropierii foarte mari dintre cer și pământ, zeii puteau coborî și se puteau amesteca printre oameni, iar oamenii urcau în cer escaladând un munte, un arbore sau o scară. Arborele sau liana ce lega cele două niveluri cosmice au fost tăiate sau muntele ce atingea cerul cu vârful a fost retezat. Doar șamanii, eroii, suveranii și misticii puteau urca prin procese extatice la cer, încercând astfel restabilirea situației primordiale.
+
+Un al treilea mit îi descrie pe Fu Xi și Nu Wa, două ființe cu trup de dragon, despre care se spune că ar fi frate și soră și care erau reprezentate în iconografie cu cozile înlănțuite. După potop, Nu Wa reface cerul albastru cu pietre de cinci culori diferite, taie picioarele unei țestoase uriașe și înalță patru stâlpi în cei patru poli ai lumii. De asemenea zeița-dragon îl ucide pe Kong Kong (Dragonul Negru). Nu Wa adună cenușă de trestie pentru a opri apele revărsate, apoi modelează oamenii: din noroi pe oamenii săraci, iar din lut galben pe nobili.
+O altă legendă este cea a lui Yu cel Mare. În vremea tatălui său, Yao, lumea nu era încă orânduită cum este acum, iar apele mari curgeau haotic, inundând lumea. Yao ridicase diguri, dar această măsură nu a reușit să stabilească ordinea. De aceea, în timpul domniei sale Yu cel Mare sapă pământul și silește apele să se rostogolească în mare, după care vânează șerpii și dragonii.
+
+### Geneza în daoism
+
+În religia daoistă apărută în China, înaintea cerului și a pământului a apărut o ființă nedefinită, dar perfectă, care are în mod haotic condiția unui bloc de piatră nesculptat. Această entitate poartă numele „Dao” sau „Mama Universului” și este o totalitate primordială, vie, a genezei, fără formă sau înfățișare. „Dao” înseamnă totodată și transformarea neîntreruptă a lumii printr-o alternanță de energii antagonice: yin și yang.

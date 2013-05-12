@@ -24,12 +24,12 @@ html header {
   box-shadow: 0 0 15px #444;
   z-index: 9;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, rgba(255,255,255,0.1)), color-stop(0.5, rgba(255,255,255,0.1)), color-stop(1, rgba(255,255,255,0.2))) #400;
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%) #400;
-  background: -moz-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%) #400;
-  background: -o-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%) #400;
-  background: -ms-linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%) #400;
-  background: linear-gradient(top, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.2) 100%) #400;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #ddd), color-stop(0.499, #eee), color-stop(0.5, #ccc), color-stop(1, #fff)) #eee;
+  background: -webkit-linear-gradient(top, #ddd 0%, #eee 49.9%, #ccc 50%, #fff 100%) #eee;
+  background: -moz-linear-gradient(top, #ddd 0%, #eee 49.9%, #ccc 50%, #fff 100%) #eee;
+  background: -o-linear-gradient(top, #ddd 0%, #eee 49.9%, #ccc 50%, #fff 100%) #eee;
+  background: -ms-linear-gradient(top, #ddd 0%, #eee 49.9%, #ccc 50%, #fff 100%) #eee;
+  background: linear-gradient(top, #ddd 0%, #eee 49.9%, #ccc 50%, #fff 100%) #eee;
 }
 html header nav {
   display: inline-block;
@@ -46,7 +46,7 @@ html header nav li {
 }
 html header nav li a {
   display: block;
-  color: #ccc;
+  color: #666;
   text-decoration: none;
   padding: 0 10px;
   margin: 0;
@@ -57,15 +57,15 @@ html header nav li a {
   transition: all 0.5s ease-in-out;
   height: 45px;
   line-height: 45px;
-  border-left: solid 1px rgba(255,255,255,0.2);
-  border-right: solid 1px rgba(255,255,255,0.1);
+  border-left: solid 1px #ccc;
+  border-right: solid 1px #fff;
 }
 html header nav li a:hover,
 html header nav li a:active {
-  background: rgba(0,0,0,0.4);
-  text-shadow: 0 1px 1px #000;
+  background: rgba(255,255,255,0.5);
+  text-shadow: 0 1px 1px #fff;
   text-decoration: none;
-  color: #fff;
+  color: #000;
 }
 html header nav li:first-child a {
   border-left: none;
@@ -241,28 +241,42 @@ html section {
   bottom: 0;
   right: 0;
   left: 0;
+  -webkit-perspective: 600;
+  -moz-perspective: 600;
+  -ms-perspective: 600;
+  perspective: 600;
 }
 html section article {
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  bottom: 0;
+  bottom: 15px;
   overflow: auto;
   z-index: -1;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
   width: 950px;
   margin: 0 auto;
   padding: 25px;
-  -webkit-transform: translateX(-150%);
-  -moz-transform: translateX(-150%);
-  -o-transform: translateX(-150%);
-  -ms-transform: translateX(-150%);
-  transform: translateX(-150%);
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  -webkit-transform: rotateX(-90deg);
+  -moz-transform: rotateX(-90deg);
+  -o-transform: rotateX(-90deg);
+  -ms-transform: rotateX(-90deg);
+  transform: rotateX(-90deg);
+  -webkit-transform-origin: center top;
+  -moz-transform-origin: center top;
+  -o-transform-origin: center top;
+  -ms-transform-origin: center top;
+  transform-origin: center top;
+  -webkit-box-shadow: 0 0 10px #444;
+  box-shadow: 0 0 10px #444;
+  background: #fec;
 }
 html section article p {
   text-indent: 25px;
@@ -337,61 +351,79 @@ html section article .center figure.center {
   height: 150px;
 }
 html section article#home {
-  background: urL("/images/7379.jpg") no-repeat center center;
-  -webkit-background-size: stretch;
-  -moz-background-size: stretch;
-  background-size: stretch;
+  background: url("/images/home.jpg") no-repeat center center #fff;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
+  -webkit-transform-origin: center bottom;
+  -moz-transform-origin: center bottom;
+  -o-transform-origin: center bottom;
+  -ms-transform-origin: center bottom;
+  transform-origin: center bottom;
+  -webkit-transform: rotateX(180deg);
+  -moz-transform: rotateX(180deg);
+  -o-transform: rotateX(180deg);
+  -ms-transform: rotateX(180deg);
+  transform: rotateX(180deg);
+  bottom: 0;
   width: 100%;
 }
 html section article.active {
   z-index: 1;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -o-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+  -webkit-transform: rotateX(0) !important;
+  -moz-transform: rotateX(0) !important;
+  -o-transform: rotateX(0) !important;
+  -ms-transform: rotateX(0) !important;
+  transform: rotateX(0) !important;
 }
 html section article.active + article {
-  -webkit-transform: translateX(150%);
-  -moz-transform: translateX(150%);
-  -o-transform: translateX(150%);
-  -ms-transform: translateX(150%);
-  transform: translateX(150%);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  transform: rotateX(90deg);
 }
 html section article.active + article + article {
-  -webkit-transform: translateX(200%);
-  -moz-transform: translateX(200%);
-  -o-transform: translateX(200%);
-  -ms-transform: translateX(200%);
-  transform: translateX(200%);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  transform: rotateX(90deg);
 }
 html section article.active + article + article + article {
-  -webkit-transform: translateX(250%);
-  -moz-transform: translateX(250%);
-  -o-transform: translateX(250%);
-  -ms-transform: translateX(250%);
-  transform: translateX(250%);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  transform: rotateX(90deg);
 }
 html section article.active + article + article + article + article {
-  -webkit-transform: translateX(300%);
-  -moz-transform: translateX(300%);
-  -o-transform: translateX(300%);
-  -ms-transform: translateX(300%);
-  transform: translateX(300%);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  transform: rotateX(90deg);
 }
 html section article.active + article + article + article + article + article {
-  -webkit-transform: translateX(350%);
-  -moz-transform: translateX(350%);
-  -o-transform: translateX(350%);
-  -ms-transform: translateX(350%);
-  transform: translateX(350%);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  transform: rotateX(90deg);
 }
 html section article.active + article + article + article + article + article + article {
-  -webkit-transform: translateX(400%);
-  -moz-transform: translateX(400%);
-  -o-transform: translateX(400%);
-  -ms-transform: translateX(400%);
-  transform: translateX(400%);
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  transform: rotateX(90deg);
+}
+html section article.active + article + article + article + article + article + article + article {
+  -webkit-transform: rotateX(90deg);
+  -moz-transform: rotateX(90deg);
+  -o-transform: rotateX(90deg);
+  -ms-transform: rotateX(90deg);
+  transform: rotateX(90deg);
 }
 html section article img {
   padding: 5px;
@@ -412,11 +444,8 @@ html section article img.center {
   margin-right: none;
 }
 html section article ul li {
-  overflow: hidden;
   margin: 0;
   padding: 0;
-  list-style: circle;
-  display: table;
 }
 html section article ul li img {
   max-width: 200px;
@@ -424,7 +453,6 @@ html section article ul li img {
   float: left;
 }
 html section article ul li p {
-  display: table-cell;
   vertical-align: middle;
   padding: 15px;
 }

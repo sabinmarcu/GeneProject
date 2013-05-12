@@ -53,12 +53,6 @@ class Application extends BaseObject
 					# Setting up routes
 					routes =
 						"/": => do _scenarios.root
-						"/imagini": => 
-							_activate "imagini" 
-							source = ""
-							source += "<a href='/images/#{image}'><img src='/images/#{image}' /></a>" for image in FILES
-							console.log source
-							$("article#imagini").html source
 						"/*": (loc) => _scenarios.document loc[0]
 					LinkManager.setRoutes routes
 
