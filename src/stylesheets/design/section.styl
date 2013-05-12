@@ -24,6 +24,17 @@ section
 			background urL("/images/Castelul_Peles_3.jpg") no-repeat
 			background-size cover
 			width 100%
+		&#vizitare
+			h1
+				margin-top 50px
+			p
+				text-indent 0
+				margin 5px 0 0
+			blockquote
+				border none
+				margin 10px 10px 0 0
+				padding 0
+				color #888
 		&.active
 			z-index 1
 			transform translateY(0)
@@ -57,3 +68,21 @@ section
 				display table-cell
 				vertical-align middle
 				padding 15px
+.third
+	width 28%
+	float left
+	margin-right 2%
+.third:nth-child(3n + 1)
+	margin-right 0
+
+.half
+	width 48%
+	float left
+	margin-right 2%
+.half:nth-child(2n + 1)
+	margin-right 0
+.third, .half
+	overflow hidden
+.clear
+	display block
+	clear both

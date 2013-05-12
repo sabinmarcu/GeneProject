@@ -70,7 +70,7 @@ class Application extends BaseObject
 						"muzeu": "Muzeu"
 						"locatie": "Locatie"
 						"imagini": "Imagini"
-						"contact": "Contact"
+						"vizitare": "Vizitare"
 					$("body").html DepMan.render "index", title: document.title, menu: _menu
 					do LinkManager.linkAllAnchors
 
