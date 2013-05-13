@@ -18,17 +18,24 @@ section
 		width 950px
 		margin 0 auto
 		padding 25px
-		transform translateX(-120%) rotateY(180deg)
-		background white
+		transform translateY(-120%) rotateX(180deg)
+		background #222
 		box-shadow 0 0 10px #444
 		transform-style preserve3d
 		transition all 1s ease-in-out
 		backface-visibility hidden
+		color #ccc
 		p
 			text-indent 25px
+		&#galerie
+			text-align center
+			vertical-align top
+			img
+				display inline-block
+				max-width 28%
 		&#home 
-			background urL("/images/home.jpg") no-repeat
-			background-size cover
+			background urL("/images/bullet_for_my_valentine_logo_wallpaper-normal.jpg") no-repeat
+			background-size contain
 			width 100%
 			vertical-align center
 			h1
@@ -45,22 +52,22 @@ section
 			&:hover h1
 				color rgba(256, 256, 256, 0.8)
 				text-shadow 0 0 25px black
-			transform translateX(0) rotateY(0) scale(3.7)
+			transform translateY(50%) translateX(-50%) scale(2)
 			backface-visibility visible
 			opacity 0.2
 			z-index -1
 			&.active
 				z-index 9
 				opacity 1
-				transform translateX(0) rotateY(0) scale(1)
+				transform translateY(0) rotateX(0) scale(1)
 				h1
 					opacity 1
 
 		&.active
-			transform translateX(0) rotateY(0)
-			z-index 1
+			transform translateY(0) rotateX(0)
+			z-index
 		&.active + article, &.active + article + article, &.active + article + article, &.active + article + article + article, &.active + article + article + article + article, &.active + article + article + article + article + article
-			transform translateX(180%) rotateY(-180deg)
+			transform translateY(180%) rotateX(-180deg)
 		img
 			padding 5px
 			background white
@@ -137,6 +144,8 @@ section
 					max-width 500px
 		.center figure.center
 				width 22%
-				float left
 				clear none
 				height 150px
+				text-align center
+				img
+					display inline-block

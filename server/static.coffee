@@ -64,6 +64,7 @@ class Server
 				App.get "/js/*", (req, res) => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
 				App.get "/font/*", (req, res) => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
 				App.get "/images/*", (req, res) => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
+				App.get "/music/*", (req, res) => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
 				App.get "/index.app.html", (req, res)  => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
 				App.get "/manifest.webapp", (req, res)  => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
 				App.get "/arrow_up_1.png", (req, res)  => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"

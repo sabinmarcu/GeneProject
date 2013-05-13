@@ -53,24 +53,23 @@ class Application extends BaseObject
 					# Setting up routes
 					routes =
 						"/": => do _scenarios.root
-						"/imagini": => 
-							_activate "imagini" 
+						"/galerie": => 
+							_activate "galerie" 
 							source = ""
 							source += "<a href='/images/#{image}'><img src='/images/#{image}' /></a>" for image in FILES
 							console.log source
-							$("article#imagini").html source
+							$("article#galerie").html source
 						"/*": (loc) => _scenarios.document loc[0]
 					LinkManager.setRoutes routes
 
 					# Bootstrap it all
-					document.title = "Despre Cosmos"
+					document.title = "Bullet for my Valentine"
 					_menu = 
 						"home": "Acasa"
-						"despre": "Despre Cosmos"
-						"varsta": "Varsta Universului"
-						"bigbang": "Teoria BigBang-ului"
-						"galaxii": "Despre Galaxii"
-						"planete": "Despre Planete"
+						"despre": "Despre Trupa"
+						"albume": "Albume"
+						"video": "Video"
+						"galerie": "Galerie Foto"
 					$("body").html DepMan.render "index", title: document.title, menu: _menu
 					do LinkManager.linkAllAnchors
 

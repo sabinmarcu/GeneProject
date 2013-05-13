@@ -19,23 +19,25 @@ html header {
   left: 0;
   right: 0;
   height: 45px;
-  font-size: 18pt;
+  font-size: 14pt;
   line-height: 45px;
-  -webkit-box-shadow: 0 0 5px #444;
-  box-shadow: 0 0 5px #444;
   z-index: 9;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #24c), color-stop(0.5, #26c), color-stop(1, #29f));
-  background: -webkit-linear-gradient(top, #24c 0%, #26c 50%, #29f 100%);
-  background: -moz-linear-gradient(top, #24c 0%, #26c 50%, #29f 100%);
-  background: -o-linear-gradient(top, #24c 0%, #26c 50%, #29f 100%);
-  background: -ms-linear-gradient(top, #24c 0%, #26c 50%, #29f 100%);
-  background: linear-gradient(top, #24c 0%, #26c 50%, #29f 100%);
+  background: #000;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #111), color-stop(0.5, #222), color-stop(1, #333));
+  background: -webkit-linear-gradient(top, #111 0%, #222 50%, #333 100%);
+  background: -moz-linear-gradient(top, #111 0%, #222 50%, #333 100%);
+  background: -o-linear-gradient(top, #111 0%, #222 50%, #333 100%);
+  background: -ms-linear-gradient(top, #111 0%, #222 50%, #333 100%);
+  background: linear-gradient(top, #111 0%, #222 50%, #333 100%);
+  -webkit-box-shadow: 0 0 5px #444;
+  box-shadow: 0 0 5px #444;
 }
 html header nav {
   display: inline-block;
   padding: 0;
   margin: 0;
+  text-align: center;
 }
 html header nav li {
   list-style: none;
@@ -43,7 +45,6 @@ html header nav li {
   display: inline-block;
   margin: 0;
   padding: 0;
-  float: left;
 }
 html header nav li a {
   display: block;
@@ -58,8 +59,6 @@ html header nav li a {
   transition: all 0.5s ease-in-out;
   height: 45px;
   line-height: 45px;
-  border-left: solid 1px #29f;
-  border-right: solid 1px #26c;
 }
 html header nav li a:hover,
 html header nav li a:active {
@@ -258,12 +257,12 @@ html section article {
   width: 950px;
   margin: 0 auto;
   padding: 25px;
-  -webkit-transform: translateX(-120%) rotateY(180deg);
-  -moz-transform: translateX(-120%) rotateY(180deg);
-  -o-transform: translateX(-120%) rotateY(180deg);
-  -ms-transform: translateX(-120%) rotateY(180deg);
-  transform: translateX(-120%) rotateY(180deg);
-  background: #fff;
+  -webkit-transform: translateY(-120%) rotateX(180deg);
+  -moz-transform: translateY(-120%) rotateX(180deg);
+  -o-transform: translateY(-120%) rotateX(180deg);
+  -ms-transform: translateY(-120%) rotateX(180deg);
+  transform: translateY(-120%) rotateX(180deg);
+  background: #222;
   -webkit-box-shadow: 0 0 10px #444;
   box-shadow: 0 0 10px #444;
   -webkit-transform-style: preserve3d;
@@ -280,17 +279,39 @@ html section article {
   -moz-backface-visibility: hidden;
   -ms-backface-visibility: hidden;
   backface-visibility: hidden;
+  color: #ccc;
 }
 html section article p {
   text-indent: 25px;
 }
+html section article#galerie {
+  text-align: center;
+  vertical-align: top;
+}
+html section article#galerie img {
+  display: inline-block;
+  max-width: 28%;
+}
 html section article#home {
-  background: urL("/images/home.jpg") no-repeat;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
+  background: urL("/images/bullet_for_my_valentine_logo_wallpaper-normal.jpg") no-repeat;
+  -webkit-background-size: contain;
+  -moz-background-size: contain;
+  background-size: contain;
   width: 100%;
   vertical-align: center;
+  -webkit-transform: translateY(50%) translateX(-50%) scale(2);
+  -moz-transform: translateY(50%) translateX(-50%) scale(2);
+  -o-transform: translateY(50%) translateX(-50%) scale(2);
+  -ms-transform: translateY(50%) translateX(-50%) scale(2);
+  transform: translateY(50%) translateX(-50%) scale(2);
+  -webkit-backface-visibility: visible;
+  -moz-backface-visibility: visible;
+  -ms-backface-visibility: visible;
+  backface-visibility: visible;
+  opacity: 0.2;
+  filter: alpha(opacity=20);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=20)";
+  z-index: -1;
 }
 html section article#home h1 {
   color: rgba(255,255,255,0.2);
@@ -306,17 +327,37 @@ html section article#home h1 {
   -o-transition: all 0.8s ease-in-out;
   -ms-transition: all 0.8s ease-in-out;
   transition: all 0.8s ease-in-out;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 html section article#home:hover h1 {
   color: rgba(255,255,255,0.8);
   text-shadow: 0 0 25px #000;
 }
+html section article#home.active {
+  z-index: 9;
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+  -webkit-transform: translateY(0) rotateX(0) scale(1);
+  -moz-transform: translateY(0) rotateX(0) scale(1);
+  -o-transform: translateY(0) rotateX(0) scale(1);
+  -ms-transform: translateY(0) rotateX(0) scale(1);
+  transform: translateY(0) rotateX(0) scale(1);
+}
+html section article#home.active h1 {
+  opacity: 1;
+  -ms-filter: none;
+  filter: none;
+}
 html section article.active {
-  -webkit-transform: translateX(0) rotateY(0);
-  -moz-transform: translateX(0) rotateY(0);
-  -o-transform: translateX(0) rotateY(0);
-  -ms-transform: translateX(0) rotateY(0);
-  transform: translateX(0) rotateY(0);
+  -webkit-transform: translateY(0) rotateX(0);
+  -moz-transform: translateY(0) rotateX(0);
+  -o-transform: translateY(0) rotateX(0);
+  -ms-transform: translateY(0) rotateX(0);
+  transform: translateY(0) rotateX(0);
+z-index
 }
 html section article.active + article,
 html section article.active + article + article,
@@ -324,11 +365,11 @@ html section article.active + article + article,
 html section article.active + article + article + article,
 html section article.active + article + article + article + article,
 html section article.active + article + article + article + article + article {
-  -webkit-transform: translateX(120%) rotateY(-180deg);
-  -moz-transform: translateX(120%) rotateY(-180deg);
-  -o-transform: translateX(120%) rotateY(-180deg);
-  -ms-transform: translateX(120%) rotateY(-180deg);
-  transform: translateX(120%) rotateY(-180deg);
+  -webkit-transform: translateY(180%) rotateX(-180deg);
+  -moz-transform: translateY(180%) rotateX(-180deg);
+  -o-transform: translateY(180%) rotateX(-180deg);
+  -ms-transform: translateY(180%) rotateX(-180deg);
+  transform: translateY(180%) rotateX(-180deg);
 }
 html section article img {
   padding: 5px;
@@ -349,11 +390,8 @@ html section article img.center {
   margin-right: none;
 }
 html section article ul li {
-  overflow: hidden;
   margin: 0;
   padding: 0;
-  list-style: circle;
-  display: table;
 }
 html section article ul li img {
   max-width: 200px;
@@ -361,9 +399,83 @@ html section article ul li img {
   float: left;
 }
 html section article ul li p {
-  display: table-cell;
   vertical-align: middle;
   padding: 15px;
+}
+html section article p {
+  text-indent: 25px;
+}
+html section article .right {
+  margin-right: 0;
+  float: right;
+  clear: right;
+}
+html section article .left {
+  margin-left: 0;
+  float: left;
+  clear: left;
+}
+html section article .center {
+  clear: both;
+  text-align: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
+html section article img {
+  margin: 15px;
+  background: #fff;
+  border: solid 1px #ccc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  padding: 5px;
+}
+html section article figure {
+  background: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  padding: 10px;
+  text-align: center;
+  display: table;
+  width: 1px;
+}
+html section article figure figcaption {
+  text-align: center;
+  margin: 10px 0 0;
+  padding: 5px;
+  font-size: 10pt;
+}
+html section article figure img {
+  border: none;
+  padding: 0;
+  margin: 0 0 10px;
+  display: inline;
+}
+html section article figure * {
+  vertical-align: bottom;
+  display: table-row;
+  max-width: 880px;
+}
+html section article figure.right *,
+html section article figure.left * {
+  max-width: 200px;
+}
+html section article figure.right.big,
+html section article figure.left.big {
+  border: none;
+}
+html section article figure.right.big *,
+html section article figure.left.big * {
+  max-width: 500px;
+}
+html section article .center figure.center {
+  width: 22%;
+  clear: none;
+  height: 150px;
+  text-align: center;
+}
+html section article .center figure.center img {
+  display: inline-block;
 }
 html body.aside-open aside {
   background-position: 0 0;
