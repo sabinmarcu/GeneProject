@@ -1,6 +1,6 @@
 header
 	position fixed
-	top 0
+	bottom 0
 	left 0
 	right 0
 	height 45px
@@ -9,7 +9,7 @@ header
 	box-shadow 0 0 5px #444
 	z-index 9
 	text-align center	
-	background linear-gradient(top, white 0%, white 50%, #ddd 100%)
+	background linear-gradient(top, #24c 0%, #26c 50%, #29f 100%)
 	nav 
 		display inline-block
 		padding 0
@@ -23,20 +23,19 @@ header
 			float left
 			a
 				display block
-				color lighten(black, 50)
+				color rgba(256, 256, 256, 0.6)
 				text-decoration none
 				padding 0 10px
 				margin 0
 				transition all 0.5s ease-in-out
 				height 45px
 				line-height 45px
-				border-left solid 1px white
-				border-right solid 1px #ddd
+				border-left solid 1px #29f
+				border-right solid 1px #26c
 				&:hover, &:active
 					background rgba(0, 0, 0, 0.1)
-					text-shadow 0 1px 1px white
 					text-decoration none
-					color black
+					color rgba(256, 256, 256, 1)
 			&:first-child a
 				border-left none
 			&:last-child a

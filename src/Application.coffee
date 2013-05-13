@@ -63,7 +63,7 @@ class Application extends BaseObject
 					LinkManager.setRoutes routes
 
 					# Bootstrap it all
-					document.title = "Castelul Peleș"
+					document.title = "Despre Cosmos"
 					_menu = 
 						"home": "Acasa"
 						"istoric": "Istoric"
