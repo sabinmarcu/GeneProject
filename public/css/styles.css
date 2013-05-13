@@ -15,7 +15,7 @@ body {
 }
 html header {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
   height: 45px;
@@ -25,12 +25,12 @@ html header {
   box-shadow: 0 0 5px #444;
   z-index: 9;
   text-align: center;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #fff), color-stop(0.5, #fff), color-stop(1, #ddd));
-  background: -webkit-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: -moz-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: -o-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: -ms-linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
-  background: linear-gradient(top, #fff 0%, #fff 50%, #ddd 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #24c), color-stop(0.5, #26c), color-stop(1, #29f));
+  background: -webkit-linear-gradient(top, #24c 0%, #26c 50%, #29f 100%);
+  background: -moz-linear-gradient(top, #24c 0%, #26c 50%, #29f 100%);
+  background: -o-linear-gradient(top, #24c 0%, #26c 50%, #29f 100%);
+  background: -ms-linear-gradient(top, #24c 0%, #26c 50%, #29f 100%);
+  background: linear-gradient(top, #24c 0%, #26c 50%, #29f 100%);
 }
 html header nav {
   display: inline-block;
@@ -47,7 +47,7 @@ html header nav li {
 }
 html header nav li a {
   display: block;
-  color: #808080;
+  color: rgba(255,255,255,0.6);
   text-decoration: none;
   padding: 0 10px;
   margin: 0;
@@ -58,15 +58,14 @@ html header nav li a {
   transition: all 0.5s ease-in-out;
   height: 45px;
   line-height: 45px;
-  border-left: solid 1px #fff;
-  border-right: solid 1px #ddd;
+  border-left: solid 1px #29f;
+  border-right: solid 1px #26c;
 }
 html header nav li a:hover,
 html header nav li a:active {
   background: rgba(0,0,0,0.1);
-  text-shadow: 0 1px 1px #fff;
   text-decoration: none;
-  color: #000;
+  color: #fff;
 }
 html header nav li:first-child a {
   border-left: none;
@@ -238,10 +237,15 @@ html aside:hover>nav li:hover nav li:hover {
 html section {
   position: fixed;
   overflow: hidden;
-  top: 45px;
-  bottom: 0;
+  top: 0;
+  bottom: 45px;
   right: 0;
   left: 0;
+  -webkit-perspective: 1600;
+  -moz-perspective: 1600;
+  -ms-perspective: 1600;
+  perspective: 1600;
+  background: #000;
 }
 html section article {
   position: absolute;
@@ -251,44 +255,80 @@ html section article {
   bottom: 0;
   overflow: auto;
   z-index: -1;
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
   width: 950px;
   margin: 0 auto;
   padding: 25px;
+  -webkit-transform: translateX(-120%) rotateY(180deg);
+  -moz-transform: translateX(-120%) rotateY(180deg);
+  -o-transform: translateX(-120%) rotateY(180deg);
+  -ms-transform: translateX(-120%) rotateY(180deg);
+  transform: translateX(-120%) rotateY(180deg);
+  background: #fff;
+  -webkit-box-shadow: 0 0 10px #444;
+  box-shadow: 0 0 10px #444;
+  -webkit-transform-style: preserve3d;
+  -moz-transform-style: preserve3d;
+  -o-transform-style: preserve3d;
+  -ms-transform-style: preserve3d;
+  transform-style: preserve3d;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transition: all 1s ease-in-out;
+  -o-transition: all 1s ease-in-out;
+  -ms-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 html section article p {
   text-indent: 25px;
 }
 html section article#home {
-  background: urL("/images/Castelul_Peles_3.jpg") no-repeat;
+  background: urL("/images/home.jpg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   width: 100%;
+  vertical-align: center;
+}
+html section article#home h1 {
+  color: rgba(255,255,255,0.2);
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 500px;
+  height: 100px;
+  margin: -50px 0 0 -250px;
+  -webkit-transition: all 0.8s ease-in-out;
+  -moz-transition: all 0.8s ease-in-out;
+  -o-transition: all 0.8s ease-in-out;
+  -ms-transition: all 0.8s ease-in-out;
+  transition: all 0.8s ease-in-out;
+}
+html section article#home:hover h1 {
+  color: rgba(255,255,255,0.8);
+  text-shadow: 0 0 25px #000;
 }
 html section article.active {
-  z-index: 1;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -o-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
+  -webkit-transform: translateX(0) rotateY(0);
+  -moz-transform: translateX(0) rotateY(0);
+  -o-transform: translateX(0) rotateY(0);
+  -ms-transform: translateX(0) rotateY(0);
+  transform: translateX(0) rotateY(0);
 }
-html section article + article {
-  -webkit-transform: translateY(100%);
-  -moz-transform: translateY(100%);
-  -o-transform: translateY(100%);
-  -ms-transform: translateY(100%);
-  transform: translateY(100%);
+html section article.active + article,
+html section article.active + article + article,
+html section article.active + article + article,
+html section article.active + article + article + article,
+html section article.active + article + article + article + article,
+html section article.active + article + article + article + article + article {
+  -webkit-transform: translateX(120%) rotateY(-180deg);
+  -moz-transform: translateX(120%) rotateY(-180deg);
+  -o-transform: translateX(120%) rotateY(-180deg);
+  -ms-transform: translateX(120%) rotateY(-180deg);
+  transform: translateX(120%) rotateY(-180deg);
 }
 html section article img {
   padding: 5px;

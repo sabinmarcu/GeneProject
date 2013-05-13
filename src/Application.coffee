@@ -66,11 +66,11 @@ class Application extends BaseObject
 					document.title = "Despre Cosmos"
 					_menu = 
 						"home": "Acasa"
-						"istoric": "Istoric"
-						"muzeu": "Muzeu"
-						"locatie": "Locatie"
-						"imagini": "Imagini"
-						"contact": "Contact"
+						"despre": "Despre Cosmos"
+						"varsta": "Varsta Universului"
+						"bigbang": "Teoria BigBang-ului"
+						"galaxii": "Despre Galaxii"
+						"planete": "Despre Planete"
 					$("body").html DepMan.render "index", title: document.title, menu: _menu
 					do LinkManager.linkAllAnchors
 

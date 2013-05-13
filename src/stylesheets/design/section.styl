@@ -41,14 +41,26 @@ section
 				height 100px
 				margin -50px 0 0 -250px
 				transition all 0.8s ease-in-out
+				opacity 0
 			&:hover h1
 				color rgba(256, 256, 256, 0.8)
 				text-shadow 0 0 25px black
+			transform translateX(0) rotateY(0) scale(3.7)
+			backface-visibility visible
+			opacity 0.2
+			z-index -1
+			&.active
+				z-index 9
+				opacity 1
+				transform translateX(0) rotateY(0) scale(1)
+				h1
+					opacity 1
 
 		&.active
 			transform translateX(0) rotateY(0)
+			z-index 1
 		&.active + article, &.active + article + article, &.active + article + article, &.active + article + article + article, &.active + article + article + article + article, &.active + article + article + article + article + article
-			transform translateX(120%) rotateY(-180deg)
+			transform translateX(180%) rotateY(-180deg)
 		img
 			padding 5px
 			background white
@@ -64,16 +76,67 @@ section
 				margin-left none
 				margin-right none
 		ul li
-			overflow hidden
 			margin 0
 			padding 0
-			list-style circle
-			display table
 			img
 				max-width 200px
 				max-height 200px
 				float left
 			p
-				display table-cell
 				vertical-align middle
 				padding 15px
+
+		p
+			text-indent 25px
+		.right
+			margin-right 0
+			float right
+			clear right
+		.left
+			margin-left 0
+			float left
+			clear left
+		.center
+			clear both
+			text-align center
+			margin 0 auto
+			overflow hidden
+		img 
+			margin 15px
+			background white
+			border solid 1px #ccc
+			border-radius 5px
+			padding 5px
+		figure
+			background white
+			border-radius 5px 
+			border solid 1px #ccc
+			padding 10px
+			text-align center
+			display table
+			width 1px
+			figcaption
+				text-align center
+				margin 10px 0 0
+				padding 5px
+				font-size 10pt
+			img
+				border none
+				padding 0
+				margin 0 0 10px
+				display inline
+			* 
+				vertical-align bottom
+				display table-row
+				max-width 880px
+			&.right *, &.left *
+				max-width 200px
+			&.right.big, &.left.big
+				border none
+				*
+					max-width 500px
+		.center figure.center
+				width 22%
+				float left
+				clear none
+				height 150px

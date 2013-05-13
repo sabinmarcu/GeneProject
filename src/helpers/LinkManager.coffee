@@ -45,8 +45,10 @@ class LinkManager extends BaseObject
 		return false
 
 	link: (e) =>
-		el = @getParentAnchor e.srcElement
+		el = @getParentAnchor e.target
+		console.log el
 		if @checkRoute(el.getAttribute "href") then history.pushState null, null, el.href
+		e.stopPropagation()
 		e.preventDefault()
 
 	getParentAnchor: (e) =>
@@ -56,6 +58,6 @@ class LinkManager extends BaseObject
 
 	linkAllAnchors: =>
 		anchors = document.querySelectorAll("a")
-		anchor.addEventListener "click", @link for anchor in anchors
+		anchor.addEventListener "click", @link, false for anchor in anchors
 
 module.exports = LinkManager
