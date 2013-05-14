@@ -9,6 +9,8 @@ Date generale:
 * Acces: DN 67C Sebes-Sugag-Tau-Bistra (44 km), apoi inca 23 km pana la manastire. Variante accesibile doar vara: DN 7A Petrosani-Obarsia Lotrului (34 km), DN 67C, Oasa, sau DN 7A Brezoi-Voineasa-Obarsia Lotrului (86 km), DN 67C, Oasa
 * Staret: protos. Iustin Miron;
 
+<figure class="center"><img src="/images/oasa.jpg" alt=""></figure>
+
 ### Despre manastirea Oasa:
 
 Manastirea Oasa este o manastire ortodoxa aflata in localitatea Sugag, judetul Alba. Aflata la o distanta de 70 de kilometri mai spre sud de Sebes si la 57 de kilometri nord-est fata de Petrosani, la poalele Muntilor Sureanu, Manastirea Oasa este o oaza de liniste, incojurata de paduri, cu vai si lacuri. Cel mai apropiat sat se afla la o distanta de peste patruzeci de kilometri de manastire.

@@ -9,6 +9,8 @@ Date generale:
 * Acces: din DN 65/E574, din Bals pe DJ 643 12,5 km, stanga in Calui pe DC 9, 3 km, pana in Gura Caluiului;
 * Staret: arhim. Corneliu Miroslav;
 
+<figure class="center"><img src="/images/calui.jpg" alt=""></figure>
+
 ### Despre manastirea Caluiu:
 
 Manastirea Calui se afla pe malul Oltetului, in apropiere de Craiova, nu departe de comuna Oboga, comuna renumita pentru ceramica ei populara. Dupa traditie, in acest loc in care a fost intemeiata manastirea, se spune ca Balan, calul lui Mihai Viteazu, a lovit cu copita in pamant si a tasnit apa. 

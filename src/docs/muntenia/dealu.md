@@ -11,6 +11,8 @@ Date generale:
 * Acces: din centrul Targovistei 3,5 km NE pana la manastire
 * Stareta: stavrofora Emanuela Preda
 
+<figure class="center"><img src="/images/dealu.jpg" alt=""></figure>
+
 
 ### Despre manastirea Dealu:
 

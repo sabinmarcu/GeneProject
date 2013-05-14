@@ -10,6 +10,8 @@ Date generale:
 * Staret: arhim. Vichentie Amariei;
 * Adresa: com. Vanatori, 617500, jud. Neamt
 
+<figure class="center"><img src="/images/scu.jpg" alt=""></figure>
+
 ### Despre manastirea Secu:
 
 Manastirea Secu este una dintre vechile vetre monahale ortodoxe din judetul Neamt. Aflata intre localitatile nemtene Vanatori si Pipirig, manastirea a fost construita in anul 1602, de catre marele vornic Nestor Ureche, tatal marelui cronicar Grigore Ureche, pe locul unei mici sihastrii, numita atunci "Schitul lui Zosima", asezamant intemeiat in anul 1564.

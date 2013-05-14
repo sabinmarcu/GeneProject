@@ -9,6 +9,8 @@ Date generale:
 * Acces: DN65/E574 Slatina-Craiova 7,8 km, stanga pe DN64 catre Caracal, 10 km, stanga pe DC80 400 m
 * Stareta: stavrofora Eufrosina Stanciu;
 
+<figure class="center"><img src="/images/brancoveni.jpg" alt=""></figure>
+
 ### Despre manastirea Brancoveni:
 
 Manastirea Brancoveni este o manastire ortodoxa de maici, cu viata de obste, din comuna Brancoveni, judetul Olt, Romania. Manastirea se afla la o distanta de numai 20 de kilometri sud-vest de Slatina si la 6 kilometri de halta Parscoveni, pe linia ferata Piatra Olt - Caracal, putin mai inspre sud de localitatea Piatra Olt. La aceasta se ajunge pe drumul ce leaga intre ele localitatile Slatina si Craiova (DN65 / E574), facandu-se stanga, spre localitatea Caracal (DN64), iar mai apoi tot stanga, pe drumul comunal DC80. 

@@ -10,6 +10,8 @@ Date generale:
 * Cazare: 70 locuri (vara)
 * Adresa: str. Manastirii, nr. 3, Slatina, 230038, jud. Olt
 
+<figure class="center"><img src="/images/clocociov.jpg" alt=""></figure>
+
 ### Despre manastirea Clocociov:
 
 Manastirea Clocociov este o manastire ortodoxa din judetul Olt. Fiind inchinata Sfintilor Arhangheli Mihail si Gavriil, manastirea se afla la marginea localitatii Slatina. Din gara Slatina, se ia autobuzul, pana la spitalul central, iar mai apoi se porneste pe Strada Basarabilor, pana la manastire.

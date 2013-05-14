@@ -9,6 +9,8 @@ Date generale:
 * Acces: din Targu-Neamt spre Poiana Largului, pe DN15B, 13,5 km stanga pe DJ157F, 10 km;
 * Staret: arhim. Victorin Oanele
 
+<figure class="center"><img src="/images/sihastria.jpg" alt=""></figure>
+
 ### Despre manastirea Sihastria:
 
 Manastirea Sihastria este asezata in partea de nord a judetului Neamt, la 22 km departare de orasul Targu Neamt, pe soseaua ce duce spre Vatra Dornei. Lasand in dreapta drumul Manastirii Neamt, si inaintand spre celelalte manastiri nemtene, mai se parcurg 15 kilometri. Aici, drumul paraseste soseaua principala, trece peste Ozana si patrunde spre apus, pe valea paraului Secu.

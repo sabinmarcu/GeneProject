@@ -10,6 +10,8 @@ Date generale:
 * Stareta: monahia Fanuria Berica;
 * Despre manastirea Zamfira:
 
+<figure class="center"><img src="/images/zamfra.jpg" alt=""></figure>
+
 Manastirea este situata in lunca din stanga raului Teleajan, pe soseaua paralela cu Drumul National 1A, la aproximativ 15 kilometri de orasul Ploiesti. Din punct de vedere administrativ-teritorial, manastirea este localizata pe raza comunei Lipanesti, in imediata apropiere a satului Zamfira.
 Manastirea Zamfira - biserica de pe valea Teleajanului
 

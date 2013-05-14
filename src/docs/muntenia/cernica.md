@@ -8,6 +8,8 @@ Date generale:
 * Hram: Sfantul Mare Mucenic Gheorghe (biserica din cetate); Sfantul Mare Ierarh Nicolae (biserica de pe ostrov); Sfantul Ierarh Calinic
 * Acces: din DN 3, la E de Bucuresti, ramificatie, din com. Pantelimon (dupa 9,5 km), DJ 301 spre S (4 km). Manastirea se afla la 13,5 km de centrul Capitalei Romaniei;
 
+<figure class="center"><img src="/images/cernica.jpg" alt=""></figure>
+
 ### Despre manastirea Cernica:
 
 Manastirea Cernica, situata la 14 km de Bucuresti, pe DN 3,  si ctitorita la inceputul secolului 17, continua sa uimeasca prin istoria ei minunata si prin marea ei forta duhovniceasca. Aici a trait Sfantul Calinic, care avea, intre alte daruri, si pe acela de a citi gandurile celor din preajma sa. Aceasta veche vatra de spiritualitate si cultura romaneasca este o mandrie nationala si un loc predilect de pelerinaj spiritual. Pictorul Ion Tuculescu, scriitorul Gala Galaction, marele teolog Dumitru Staniloae si multe alte figuri ilustre, istorice sau duhovnicesti, odihnesc in cimitirul manastirii.

@@ -31,7 +31,34 @@ section
 				&:first-child
 					margin-top 25px
 				&:last-child 
-					margin-bottom 25px
+					margin-bottom 25px					
+		figure
+			background white
+			border-radius 5px 
+			border solid 1px #ccc
+			padding 10px
+			text-align center
+			width 1px
+			figcaption
+				text-align center
+				margin 10px 0 0
+				padding 5px
+				font-size 10pt
+			img
+				border none
+				background black
+				padding 0
+				margin 0 0 10px
+				display inline
+			* 
+				vertical-align bottom
+				max-width 880px
+			&.right *, &.left *
+				max-width 200px
+		.center figure.center
+				width 22%
+				clear none
+				height 150px
 &.active section
 	z-index 2
 	transform translateY(0)

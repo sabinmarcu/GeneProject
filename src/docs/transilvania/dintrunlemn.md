@@ -9,6 +9,8 @@ Date generale:
 * Acces: DN 64 Rm. Valcea-Dragasani 18 km, dreapta la Babeni pe DJ 646 2,5 km Francesti, dreapta DJ 646 6 km
 * Stareta: monahia Emanuela Oprea;
 
+<figure class="center"><img src="/images/dintrunlemn.png" alt=""></figure>
+
 ### Despre manastirea Dintr-un lemn:
 
 Manastirea Dintr-un Lemn este situata la aproximativ 25 de kilometri sud de municipiul Ramnicu Valcea si la 12 kilometri nord de Babeni, pe valea Otasaului, in comuna Francesti.

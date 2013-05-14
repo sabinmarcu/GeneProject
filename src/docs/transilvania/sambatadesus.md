@@ -9,6 +9,8 @@ Date generale:
 * Acces: DN1, E68, Fagaras, com. Voila, ramificatie DL com. Sambata de Sus (13 km);
 * Staret: arhim. Ilarion Urs
 
+<figure class="center"><img src="/images/sambatadesus.jpg" alt=""></figure>
+
 ### Despre manastirea Sambata de Sus:
 
 Aflata pe valea raului Sambata, la poalele Muntilor Fagaras, este renumita ca loc de reculegere, mangaiere si intarire sufleteasca pentru credinciosii si vizitatorii ce se roaga ori poposesc in acest locas sfant.

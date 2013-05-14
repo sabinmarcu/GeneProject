@@ -9,6 +9,8 @@ Date genrale:
 * Acces: DJ186 Sighetu Marmatiei-Vadu Izei-Oncesti-Barsana
 * Stareta: stavrofora Fiiofteia Oltean
 
+<figure class="center"><img src="/images/barsana.jpg" alt=""></figure>
+
 ### Despre manastirea Barsana:
 
 Manastirea Barsana, asezata pe Valea Izei, este o icoana a sufletului crestin ortodox maramuresean, o speranta pentru un viitor binecuvantat, este un loc sfant unde natura se uneste cu Biserica in Liturghie cosmica.
