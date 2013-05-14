@@ -8,6 +8,8 @@ Date generale:
 * Hram: Schimbarea la Fata, Sfanta Treime
 * Acces: Moisei-Borsa-Pasul Prislop, la 20 km de Borsa sau Vatra Dornei-Iacobeni-Ciocanesti-Carlibaba-Pasul Prislop, la 60 km de Vatra Dornei
 * Staret: arhid. Andrei Reziuc
+
+<figure class="center"><img src="/images/sftrpr.jpg" alt=""></figure>
  
 ### Depsre manastirea Prislop:
 

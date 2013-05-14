@@ -10,6 +10,8 @@ Date gererale:
 * Stareta: stavrofora Mihaela Cozmei
 * Adresa: com. Sucevita, 727510, jud. Suceava
 
+<figure class="center"><img src="/images/sucevita.jpg" alt=""></figure>
+
 ### Despre Manastirea Sucevita:
 
 Manastirea Sucevita, cu hramul Invierea Domnului, a fost construita in ultimele decenii ale secolului al XVI-lea, cu cheltuiala familiei de boieri Movila. Traditia aseaza pe valea raului Sucevita, intre dealuri, o biserica din lemn si o schivnicie de pe la inceputul veacului al XVI-lea.

@@ -9,6 +9,8 @@ Date generale:
 * Acces: DN 22/E87 Isaccea-Tulcea. Indicator, dupa 5 km de la Isaccea, 4,5 km spre S pana la Manastirea Cocos. Manastirea se afla la 6 km de Niculitel, 10 km SE de Isaccea si 35 km V de Tulcea
 * Staret: ierom. Visarion Scutaru;
 
+<figure class="center"><img src="/images/cocos.jpg" alt=""></figure>
+
 ### Despre manastirea Cocos:
 
 Manastirea Cocos se afla la 6 kilometri distanta de comuna Niculitel si la aproximativ 35 de kilometri vest de orasul Tulcea. Manastirea este condusa de o obste de calugari, avand drept hramuri Pogorarea Sfantului Duh (biserica mare) si Sfantul Ierarh Nicolae (paraclisul).

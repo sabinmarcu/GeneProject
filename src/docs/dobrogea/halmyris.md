@@ -8,6 +8,8 @@ Date generale:
 * Hram: Sfintii Epictet si Astion (biserica mare, aflata in constructie si primul paraclis), Sfintii Montanus si Maxima (biserica din demisol)
 * Acces: din Tulcea, pe DJ222C spre SE pana la Murighiol (46 km). La intersectia din centrul Murighiolului se continua catre stanga, spre Dunavatu de Jos, pe DC9, drum pietruit. La 1,5 km de la iesirea din Murighiol, pe partea stanga a drumului, se afla ruinele cetatii Halmyris, langa care este situata manastirea
 
+<figure class="center"><img src="/images/halmyris.jpg" alt=""></figure>
+
 ### Despre manastirea Halmyris
 
 Halmyris, nume ca din povesti. O poveste antica care s-a scris, acum mai bine de 1700 de ani, in aceste locuri ale provinciei Scythia Minor - Dobrogea de astazi. S-a scris cu sangele Martirilor Epictet, preotul si Astion, monahul. S-a marturisit in perioada sangeroaselor persecutii dezlantuite impotriva crestinilor de catre imparatul Diocletian (284-305) si coregentii sai.

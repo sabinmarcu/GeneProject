@@ -281,6 +281,41 @@ html body section article > div > *:first-child {
 html body section article > div > *:last-child {
   margin-bottom: 25px;
 }
+html body section article figure {
+  background: #fff;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  border: solid 1px #ccc;
+  padding: 10px;
+  text-align: center;
+  width: 1px;
+}
+html body section article figure figcaption {
+  text-align: center;
+  margin: 10px 0 0;
+  padding: 5px;
+  font-size: 10pt;
+}
+html body section article figure img {
+  border: none;
+  background: #000;
+  padding: 0;
+  margin: 0 0 10px;
+  display: inline;
+}
+html body section article figure * {
+  vertical-align: bottom;
+  max-width: 880px;
+}
+html body section article figure.right *,
+html body section article figure.left * {
+  max-width: 200px;
+}
+html body section article .center figure.center {
+  width: 22%;
+  clear: none;
+  height: 150px;
+}
 html body.active section {
   z-index: 2;
   -webkit-transform: translateY(0);

@@ -9,6 +9,8 @@ Date generale:
 * Acces: manastirea este situata pe DN229A, intre satele Telita si Posta, de la - Tulcea spre Isaccea, la 60 km SE de Galati (DN22, DN229A), 19 km SE de Isaccea si 23 km SV de Tulcea
 * Stareta: monahia Casiana Mares;
 
+<figure class="center"><img src="/images/celicdere.jpg" alt=""></figure>
+
 ### Despre manastirea Celic Dere
 
 Manastirea Celic-Dere, situata in partea de nord a Dobrogei, este unul dintre cele mai importante centre de spiritualitate dintre Dunare si Marea Neagra. Numele manastirii este luat de la paraul Celic-Dere (nume turcesc, in romana insemnand "paraiasul de otel", aici fiind gasite arme din trecutul indepartat).

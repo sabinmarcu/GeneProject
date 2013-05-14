@@ -9,6 +9,8 @@ Date gererale:
 * Acces: DN 57 Oravita spre SV10 km, DJ571 Ciuchici-Macoviste-Sasca Montana (17 km), apoi pe drum forestier 2 km
 * Stareta: monahia Dimitria losif;
 
+<figure class="center"><img src="/images/neta.jpg" alt=""></figure>
+
 ### Depre manastirea Nera:
 
 Manastirea Slatina Nera este amplasata intr-o zona de deal, la 20 km. de Oravita, pe malul raului Nera, in apropierea localitatii Sasea Montana. Initiativa construirii acestui asezamant monahal apartine domnului Dr. Chirila loan, fost director al Asociatiei Cristiana din Bucuresti, originar din Slatina Nera si sponsorul principal al lucrarilor care se executa, in ziua de 15 martie 1994, la sediul protopopiatului Oravita a avut loc o discutie intre reprezentantii Asociatiei Cristiana si parintele protopop loan Varan, in care s-a convenit ca parohia Slatina Nera sa cedeze o parte din sesia parohiala, adica locul pe care s-a construit actuala manastire. La propunerea domnului Dr. Chirila loan Sf. Sinod al Bisericii Ortodoxe Romane a aprobat prin decizia nr. 3866 din 19 iulie 1994 infiintarea acestei manastiri, pusa sub purtarea de grija a Prea Cuvioasei maicii Paraschiva.

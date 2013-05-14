@@ -9,6 +9,8 @@ Date generale:
 * Acces: DN6/E70 Caransebes (spre Baile Herculane)-Armenis (25 km)
 * Staret: protos. Paisie Sadici;
 
+<figure class="center"><img src="/images/piatrascrisa.jpg" alt=""></figure>
+
 ### Despre manastirea Piatra Scrisa
 
 Manastirea Piatra Scrisa este o manastire ortodoxa din judetul Caras Severin, localizata in comuna Armenis. Hramul acestui sfant locas de rugaciune este "Duminica Tuturor Sfintilor", prima duminica dupa Rusalii. Smerita si mai putin cunoscuta, manastirea este infrumusetata cu o viata de obste. Calugarii ofera cazare pelerinilor, insa in limita locurilor existente; momentan doar opt paturi sunt disponibile.

@@ -9,6 +9,8 @@ Date generale:
 * Acces: in cartierul Gai, in nord-vestul municipiului Arad, in dreapta sosei spre Nadlag;
 * Stareta: monahia Magdalena Bortes
 
+<figure class="center"><img src="/images/gai.jpg" alt=""></figure>
+
 ### Despre manastirea Gai:
 
 In zona de nord - vest a Aradului, in cartierul Gai, la capatul strazii Dunarii, se inalta unul din cele mai reprezentative monumente din secolul al XVII-lea, din zona de vest a tarii, Manastirea Sfantul Simeon Stalpnicul sau Manastirea Gai. Manastirea Gai a fost ridicata intre anii 1760-1762 de catre episcopul Sinesie Jivanovici (1751-1768) pentru vesnica sa pomenire si pentru a fi folosita de urmasii sai in scaunul episcopal al Aradului.

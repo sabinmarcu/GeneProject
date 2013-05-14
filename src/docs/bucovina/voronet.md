@@ -9,6 +9,8 @@ Date gererale:
 * Adresa: str. Voronet, nr. 166, Gura Humorului, 725300, jud. Suceava Accesdin Gura Humorului in Voronet, pe DJ177D, 4 km
 * Stareta: stavrofora Irina Pantescu
 
+<figure class="center"><img src="/images/voronet.jpg" alt=""></figure>
+
 ## Despre manastirea Vornet:
 
 Cu voia Bunului Dumnezeu, cu rugaciunile Sf. Cuvios Daniil Sihastrul si prin osardia Biencredinciosului Voievod Stefan cel Mare si Sfant s-a inaltat, din 26 mai pana in 14 septembrie 1488, Manastirea Voronet cu hramul Sf. Mare Mucenic Gheorghe.

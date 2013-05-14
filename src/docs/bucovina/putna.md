@@ -9,6 +9,8 @@ Date generale:
 * Acces: din Radauti pe DJ178c, spre nord, 24 km, stanga in Vicovul de Sus, pe DN2H12 km, pana in Putna
 * Staret: arhim. Melchisedec Velnic
 
+<figure class="center"><img src="/images/putna.jpg" alt=""></figure>
+
 ### Despre manastirea Putna:
 
 Manastirea Putna, asezata la 72 de kilometri de Cetatea de Scaun a Sucevei, este prima si cea mai importanta ctitorie a Binecredinciosului Voievod Stefan cel Mare si Sfant, si strajuieste, de peste cinci veacuri, tinutul legendar al Bucovinei.

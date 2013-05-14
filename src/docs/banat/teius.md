@@ -9,6 +9,8 @@ Date generale:
 * Acces: Caransebes, prin parcul Teius, se traverseaza calea ferata in directia NE, 3 km
 * Staret: protos. Justinian Tibil;
 
+<figure class="center"><img src="/images/teius.jpg" alt=""></figure>
+
 ### Despre manatirea Teius:
 
 Fiecare loc in lume isi are taina si istoria lui pe care Bunul Dumnezeu o randuieste dupa puterea si intelepciunea sa. Despre existenta unui asezamant monahal in apropierea Caransebesului nu avem nici o marturie scrisa. Exista insa o traditie pastrata din generatie in generatie in legatura cu o cruce numita "Crucea verde" si un izvor de apa numit "Izvorul calugarului", ceea ce vrea sa spuna ca vreodata prin aceasta zona s-a nevoit vreun cuvios pustnic sau calugar.
