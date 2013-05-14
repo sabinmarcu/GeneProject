@@ -60,18 +60,16 @@ class Server
 					App.get "/css/styles.css", (req, res) => @compiler.compileStyles null, (source) ->
 						res.contentType "text/css"
 						res.send source, {"Content-Type": "text/css"}, 201
-					App.get "/font/*", (req, res) => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
-					App.get "/images/*", (req, res) => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
-					App.get "/index.app.html", (req, res)  => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
-					App.get "/manifest.webapp", (req, res)  => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
-					App.get "/arrow_up_1.png", (req, res)  => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
-					App.get "/imglist", (req, res) =>
-						res.contentType "application/javascript"
-						(require "fs").readdir ((require "path").resolve "#{__dirname}/../public/images"), (err, files) ->
-							res.send "window.FILES = [\"#{files.join("\", \"")}\"]", {"Content-Type": "application/javascript"}, 201
+				App.get "/js/*", (req, res) => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
+				App.get "/css/*", (req, res) => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
+				App.get "/font/*", (req, res) => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
+				App.get "/images/*", (req, res) => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
+				App.get "/index.app.html", (req, res)  => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
+				App.get "/manifest.webapp", (req, res)  => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
+				App.get "/arrow_up_1.png", (req, res)  => res.sendfile (require "path").resolve "#{__dirname}/../public#{req.url}"
 
-					App.get "*", (req, res) =>
-						res.sendfile (require "path").resolve("#{__dirname}/../public/index.html")
+				App.get "*", (req, res) =>
+					res.sendfile (require "path").resolve("#{__dirname}/../public/index.html")
 		catch e then return throw ServerErrorReporter.generate 8, ServerErrorReporter.wrapCustomError e
 
 		# Finally launch the server
